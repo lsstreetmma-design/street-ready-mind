@@ -97,75 +97,78 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <h1 className="font-heading uppercase font-bold leading-[1.05] mb-3 tracking-wide">
-          <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl tracking-[0.08em]">Could You</span>
-          <span className="block text-gradient-orange text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[0.04em] my-0.5">
-            Defend Yourself
-          </span>
-          <span className="block text-foreground text-xl sm:text-2xl md:text-3xl tracking-[0.08em]">
-            In A Real Street Situation?
-          </span>
-        </h1>
+        <div className="flex flex-col items-center gap-y-12">
+          <div>
+            <h1 className="font-heading uppercase font-bold leading-[1.05] mb-3 tracking-wide">
+              <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl tracking-[0.08em]">Could You</span>
+              <span className="block text-gradient-orange text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[0.04em] my-0.5">
+                Defend Yourself
+              </span>
+              <span className="block text-foreground text-xl sm:text-2xl md:text-3xl tracking-[0.08em]">
+                In A Real Street Situation?
+              </span>
+            </h1>
 
-        <p className="text-foreground/90 text-base md:text-lg font-body mb-8">
-          Most people can't.
-        </p>
+            <p className="text-foreground/90 text-base md:text-lg font-body mb-8">
+              Most people can't.
+            </p>
 
-        <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
-          <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
-            Learn How to Defend Yourself
-          </span>
-          <span className="block text-foreground uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.06em]">
-            In The Real World
-          </span>
-        </h2>
+            <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
+              <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
+                Learn How to Defend Yourself
+              </span>
+              <span className="block text-foreground uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.06em]">
+                In The Real World
+              </span>
+            </h2>
 
-        <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto mb-8 font-body">
-          <span className="text-foreground font-semibold">Practical. Realistic.</span> Pressure-tested self defence training designed for <span className="text-foreground font-semibold">real-life violence</span> — not sport, not fantasy.
-        </p>
-
-        {!showForm && (
-          <button
-            onClick={handleOpenForm}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105"
-            style={{
-              boxShadow:
-                "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
-              textShadow: "0 1px 2px hsl(0 0% 0% / 0.35)",
-            }}
-          >
-            BOOK YOUR SESSION
-          </button>
-        )}
-
-        {showForm && (
-          <div ref={formRef} className="mt-8">
-            <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 mb-4 text-left space-y-4 animate-fade-in max-w-lg mx-auto">
-              <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
-              <Input name="name" placeholder="Your Name" required className="bg-background" />
-              <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
-              <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
-              <div className="flex gap-3">
-                <button
-                  type="submit"
-                  disabled={sending}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading tracking-widest px-8 py-3 rounded transition-all glow-orange hover:scale-105 disabled:opacity-50"
-                >
-                  {sending ? "SENDING..." : "SEND"}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setShowForm(false)}
-                  className="border border-border text-muted-foreground hover:text-foreground px-6 py-3 rounded transition-colors"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
+            <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto font-body">
+              <span className="text-foreground font-semibold">Practical. Realistic.</span> Pressure-tested self defence training designed for <span className="text-foreground font-semibold">real-life violence</span> — not sport, not fantasy.
+            </p>
           </div>
-        )}
 
-        <ul className={`${showForm ? "mt-10" : "mt-16"} mb-2 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left`}>
+          <div ref={formRef} className="w-full flex justify-center">
+            {!showForm && (
+              <button
+                onClick={handleOpenForm}
+                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105"
+                style={{
+                  boxShadow:
+                    "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
+                  textShadow: "0 1px 2px hsl(0 0% 0% / 0.35)",
+                }}
+              >
+                BOOK YOUR SESSION
+              </button>
+            )}
+
+            {showForm && (
+              <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in w-full max-w-lg">
+                <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
+                <Input name="name" placeholder="Your Name" required className="bg-background" />
+                <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
+                <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
+                <div className="flex gap-3">
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading tracking-widest px-8 py-3 rounded transition-all glow-orange hover:scale-105 disabled:opacity-50"
+                  >
+                    {sending ? "SENDING..." : "SEND"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowForm(false)}
+                    className="border border-border text-muted-foreground hover:text-foreground px-6 py-3 rounded transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+
+        <ul className="mb-2 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
           {bookingFeatures.map((f) => (
             <li
               key={f}
@@ -175,7 +178,8 @@ const HeroSection = () => {
               <span className="whitespace-nowrap">{f}</span>
             </li>
           ))}
-        </ul>
+          </ul>
+        </div>
       </div>
     </section>
   );
