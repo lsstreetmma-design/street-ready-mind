@@ -59,31 +59,17 @@ const ContactSection = () => {
           If you're serious about learning real self defence — let's start.
         </p>
 
-        <button
-          onClick={openForm}
-          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
-        >
-          BOOK YOUR SESSION NOW
-        </button>
-        <ul className="mt-6 mb-8 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
-          {[
-            "No experience needed",
-            "1–2–1 pressure tested coaching | £35 p/h",
-            "Train at your pace",
-            "Knife threat awareness & defence principles",
-          ].map((f) => (
-            <li
-              key={f}
-              className="flex items-start gap-2 text-foreground text-xs leading-snug"
-            >
-              <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
-              <span className="whitespace-nowrap">{f}</span>
-            </li>
-          ))}
-        </ul>
+        {!showForm && (
+          <button
+            onClick={openForm}
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+          >
+            BOOK YOUR SESSION NOW
+          </button>
+        )}
 
         {showForm && (
-          <div ref={formRef} className="mb-12">
+          <div ref={formRef} className="mb-8">
             <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in max-w-lg mx-auto">
               <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
               <Input name="name" placeholder="Your Name" required className="bg-background" />
@@ -106,6 +92,22 @@ const ContactSection = () => {
                 </button>
               </div>
             </form>
+            <ul className="mt-6 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
+              {[
+                "No experience needed",
+                "1–2–1 pressure tested coaching | £35 p/h",
+                "Train at your pace",
+                "Knife threat awareness & defence principles",
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="flex items-start gap-2 text-foreground text-xs leading-snug"
+                >
+                  <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
+                  <span className="whitespace-nowrap">{f}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
 
