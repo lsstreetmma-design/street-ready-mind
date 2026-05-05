@@ -168,7 +168,7 @@ const HeroSection = () => {
             )}
           </div>
 
-        <ul className="mb-2 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
+          <ul className="mb-2 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
           {bookingFeatures.map((f) => (
             <li
               key={f}
