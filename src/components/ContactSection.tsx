@@ -59,18 +59,20 @@ const ContactSection = () => {
           If you're serious about learning real self defence — let's start.
         </p>
 
-        {!showForm && (
-          <button
-            onClick={openForm}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105 mb-10"
-          >
-            BOOK YOUR SESSION NOW
-          </button>
-        )}
+        <div ref={formRef} className="mb-8 flex flex-col items-center">
+          {!showForm && (
+            <div className="pb-12">
+              <button
+                onClick={openForm}
+                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+              >
+                BOOK YOUR SESSION NOW
+              </button>
+            </div>
+          )}
 
-        {showForm && (
-          <div ref={formRef} className="mb-8">
-            <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in max-w-lg mx-auto">
+          {showForm && (
+            <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in w-full max-w-lg">
               <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
               <Input name="name" placeholder="Your Name" required className="bg-background" />
               <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
@@ -92,7 +94,10 @@ const ContactSection = () => {
                 </button>
               </div>
             </form>
-            <ul className="mt-10 max-w-lg mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
+          )}
+
+          {showForm && (
+            <ul className="mt-10 max-w-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
               {[
                 "No experience needed",
                 "1–2–1 pressure tested coaching | £35 p/h",
@@ -108,8 +113,8 @@ const ContactSection = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        )}
+          )}
+        </div>
 
         <div className="flex flex-col items-center gap-3 text-muted-foreground">
           <div className="flex items-center gap-2">
