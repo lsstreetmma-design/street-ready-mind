@@ -62,7 +62,7 @@ const ContactSection = () => {
         {!showForm && (
           <button
             onClick={openForm}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105 mb-8"
           >
             BOOK YOUR SESSION NOW
           </button>
@@ -92,7 +92,7 @@ const ContactSection = () => {
                 </button>
               </div>
             </form>
-            <ul className="mt-6 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
+            <ul className="mt-10 max-w-lg mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
               {[
                 "No experience needed",
                 "1–2–1 pressure tested coaching | £35 p/h",
