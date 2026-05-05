@@ -176,33 +176,6 @@ const HeroSection = () => {
             </li>
           ))}
         </ul>
-
-        {showForm && (
-          <div ref={formRef} className="mt-8">
-            <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 mb-4 text-left space-y-4 animate-fade-in max-w-lg mx-auto">
-              <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
-              <Input name="name" placeholder="Your Name" required className="bg-background" />
-              <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
-              <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
-              <div className="flex gap-3">
-                <button
-                  type="submit"
-                  disabled={sending}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading tracking-widest px-8 py-3 rounded transition-all glow-orange hover:scale-105 disabled:opacity-50"
-                >
-                  {sending ? "SENDING..." : "SEND"}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setShowForm(false)}
-                  className="border border-border text-muted-foreground hover:text-foreground px-6 py-3 rounded transition-colors"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
       </div>
     </section>
   );
