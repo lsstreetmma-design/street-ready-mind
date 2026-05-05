@@ -62,7 +62,7 @@ const ContactSection = () => {
         {!showForm && (
           <button
             onClick={openForm}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105 mb-8"
           >
             BOOK YOUR SESSION NOW
           </button>
