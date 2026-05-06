@@ -128,21 +128,7 @@ const HeroSection = () => {
           </div>
 
           <div ref={formRef} className="w-full flex justify-center">
-            {!showForm && (
-              <button
-                onClick={handleOpenForm}
-                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105"
-                style={{
-                  boxShadow:
-                    "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
-                  textShadow: "0 1px 2px hsl(0 0% 0% / 0.35)",
-                }}
-              >
-                BOOK YOUR SESSION
-              </button>
-            )}
-
-            {showForm && (
+            {showForm ? (
               <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in w-full max-w-lg">
                 <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
                 <Input name="name" placeholder="Your Name" required className="bg-background" />
@@ -165,19 +151,31 @@ const HeroSection = () => {
                   </button>
                 </div>
               </form>
+            ) : (
+              <button
+                onClick={handleOpenForm}
+                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105"
+                style={{
+                  boxShadow:
+                    "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
+                  textShadow: "0 1px 2px hsl(0 0% 0% / 0.35)",
+                }}
+              >
+                BOOK YOUR SESSION
+              </button>
             )}
           </div>
 
-          <ul className="mb-2 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
-          {bookingFeatures.map((f) => (
-            <li
-              key={f}
-              className="flex items-start gap-2 text-foreground text-xs leading-snug"
-            >
-              <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
-              <span className="whitespace-nowrap">{f}</span>
-            </li>
-          ))}
+          <ul className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
+            {bookingFeatures.map((f) => (
+              <li
+                key={f}
+                className="flex items-start gap-2 text-foreground text-sm leading-snug"
+              >
+                <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
+                <span>{f}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
