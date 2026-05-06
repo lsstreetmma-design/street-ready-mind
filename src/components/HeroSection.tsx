@@ -109,7 +109,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-foreground/90 text-base md:text-lg font-body mb-8">
+            <p className="text-foreground/90 text-base md:text-lg font-body">
               Most people can't.
             </p>
 
