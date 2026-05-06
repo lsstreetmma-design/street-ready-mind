@@ -55,7 +55,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
       style={{ backgroundColor: "#000000" }}
     >
       <div
@@ -97,7 +97,7 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <div className="flex flex-col items-center gap-y-12">
+        <div className="flex flex-col items-center gap-y-20">
           <div>
             <h1 className="font-heading uppercase font-bold leading-[1.05] mb-3 tracking-wide">
               <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl tracking-[0.08em]">Could You</span>
@@ -109,7 +109,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-foreground/90 text-base md:text-lg font-body mb-8">
+            <p className="text-foreground/90 text-base md:text-lg font-body">
               Most people can't.
             </p>
 
@@ -166,7 +166,7 @@ const HeroSection = () => {
             )}
           </div>
 
-          <ul className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
+          <ul className="mt-12 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
             {bookingFeatures.map((f) => (
               <li
                 key={f}
