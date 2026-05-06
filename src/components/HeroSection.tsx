@@ -55,7 +55,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
       style={{ backgroundColor: "#000000" }}
     >
       <div
