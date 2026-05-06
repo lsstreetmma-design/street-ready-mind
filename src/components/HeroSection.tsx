@@ -97,7 +97,7 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <div className="flex flex-col items-center gap-y-12">
+        <div className="flex flex-col items-center gap-y-20">
           <div>
             <h1 className="font-heading uppercase font-bold leading-[1.05] mb-3 tracking-wide">
               <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl tracking-[0.08em]">Could You</span>
