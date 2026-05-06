@@ -122,8 +122,8 @@ const HeroSection = () => {
               </span>
             </h2>
 
-            <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto font-body">
-              <span className="text-foreground font-semibold">Practical. Realistic.</span> Pressure-tested self defence training designed for <span className="text-foreground font-semibold">real-life violence</span> — not sport, not fantasy.
+            <p className="text-foreground text-base md:text-lg max-w-xl mx-auto font-body">
+              <span className="text-foreground font-semibold">Practical. Realistic.</span> <span className="text-primary font-semibold">Pressure-tested self defence training designed for</span> <span className="text-foreground font-semibold">real-life violence</span> <span className="text-foreground">— not sport, not fantasy.</span>
             </p>
           </div>
 
