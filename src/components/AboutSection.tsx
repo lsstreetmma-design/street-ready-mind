@@ -31,10 +31,10 @@ const AboutSection = () => {
             REAL VIOLENCE IS:
           </p>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-1 text-primary font-semibold">
-            <span>✓ It's messy.</span>
-            <span>✓ It's fast.</span>
-            <span>✓ It's unpredictable.</span>
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-white font-semibold">
+            <span><span className="text-primary">✓</span> It's messy.</span>
+            <span><span className="text-primary">✓</span> It's fast.</span>
+            <span><span className="text-primary">✓</span> It's unpredictable.</span>
           </div>
 
           <p className="mt-6">
