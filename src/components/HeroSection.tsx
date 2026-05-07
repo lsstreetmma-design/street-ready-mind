@@ -156,7 +156,7 @@ const HeroSection = () => {
             {bookingFeatures.map((f) => (
               <li
                 key={f}
-                className="flex items-start gap-2 text-foreground text-sm leading-snug"
+                className="flex items-start gap-2 text-white text-sm leading-snug"
               >
                 <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
                 <span>{f}</span>

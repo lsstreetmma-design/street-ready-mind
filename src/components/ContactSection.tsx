@@ -107,7 +107,7 @@ const ContactSection = () => {
             {bookingFeatures.map((f) => (
               <li
                 key={f}
-                className="flex items-start gap-2 text-foreground text-xs leading-snug"
+                className="flex items-start gap-2 text-white text-xs leading-snug"
               >
                 <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
                 <span className="whitespace-nowrap">{f}</span>
