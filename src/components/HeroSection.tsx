@@ -99,20 +99,6 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
         <div className="flex flex-col items-center gap-y-20">
           <div>
-            <h1 className="font-heading uppercase font-bold leading-[1.05] mb-3 tracking-wide">
-              <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl tracking-[0.08em]">Could You</span>
-              <span className="block text-gradient-orange text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[0.04em] my-0.5">
-                Defend Yourself
-              </span>
-              <span className="block text-foreground text-xl sm:text-2xl md:text-3xl tracking-[0.08em]">
-                In A Real Street Situation?
-              </span>
-            </h1>
-
-            <p className="text-foreground/90 text-base md:text-lg font-body">
-              Most people can't.
-            </p>
-
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
               <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
                 Learn How to Defend Yourself
