@@ -12,7 +12,7 @@ const DifferenceSection = () => {
 
         <div className="border-t border-grit mb-12 mx-auto w-24" />
 
-        <div className="space-y-8 text-secondary-foreground font-body text-base md:text-lg leading-loose">
+        <div className="space-y-8 text-white font-body text-base md:text-lg leading-loose">
           <p>
             We don't train for perfect conditions. We train for reality.
           </p>
