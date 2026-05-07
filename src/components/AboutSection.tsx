@@ -19,7 +19,7 @@ const AboutSection = () => {
 
         <div className="border-t border-grit mb-10" />
 
-        <div className="space-y-5 text-secondary-foreground font-body text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-white font-body text-base md:text-lg leading-relaxed">
           <p>
             Self-defence classes give a false sense of security. It's clean, controlled, and predictable — but real situations aren't.
           </p>
