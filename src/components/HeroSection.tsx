@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const bookingFeatures = [
   "No experience needed",
-  "1–2–1 pressure tested coaching | £35 p/h",
+  "1:1 Pressure-Tested Coaching • £35/hr",
   "Train at your pace",
   "Knife threat awareness & defence principles",
 ];
