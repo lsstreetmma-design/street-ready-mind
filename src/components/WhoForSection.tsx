@@ -20,7 +20,7 @@ const WhoForSection = () => {
 
         <div className="border-t border-grit mb-10" />
 
-        <div className="space-y-6 text-secondary-foreground font-body text-base md:text-lg leading-relaxed text-center">
+        <div className="space-y-6 text-white font-body text-base md:text-lg leading-relaxed text-center">
           <p>
             We start from zero — building a solid foundation of movement, awareness, and tactical thinking.
           </p>
@@ -31,7 +31,7 @@ const WhoForSection = () => {
 
         <ul className="mt-10 space-y-4 max-w-xl mx-auto">
           {features.map((f) => (
-            <li key={f} className="flex items-start gap-3 text-secondary-foreground">
+            <li key={f} className="flex items-start gap-3 text-white">
               <Check className="text-primary mt-1 shrink-0" size={18} />
               <span>{f}</span>
             </li>
