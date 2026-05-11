@@ -64,7 +64,7 @@ const ContactSection = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
               Ready to Train?
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-white">
               If you're serious about learning real self defence — let's start.
             </p>
           </div>
@@ -115,7 +115,7 @@ const ContactSection = () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-2 text-muted-foreground">
+          <div className="flex items-center gap-2 text-white">
             <Phone size={16} className="text-primary" />
             <span>Call / WhatsApp: 000-000-0000</span>
           </div>
