@@ -15,13 +15,13 @@ const ConfidenceSection = () => {
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
           WHAT YOU'RE BUILDING
         </h2>
-        <p className="text-secondary-foreground text-lg mb-8">
+        <p className="text-white text-lg mb-8">
           You're not just learning techniques. You're building:
         </p>
 
         <ul className="space-y-4 max-w-xl mx-auto text-left">
           {building.map((b) => (
-            <li key={b} className="flex items-start gap-3 text-secondary-foreground">
+            <li key={b} className="flex items-start gap-3 text-white">
               <Check className="text-primary mt-1 shrink-0" size={18} />
               <span>{b}</span>
             </li>
@@ -34,7 +34,7 @@ const ConfidenceSection = () => {
           CONFIDENCE CHANGES EVERYTHING
         </h3>
 
-        <div className="space-y-5 text-secondary-foreground text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-white text-base md:text-lg leading-relaxed">
           <p>
             When you know you can defend yourself, you walk differently. You carry yourself differently. You think differently.
           </p>
