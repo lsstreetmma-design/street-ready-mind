@@ -29,19 +29,21 @@ const ContactSection = () => {
     setSending(true);
     const form = e.currentTarget;
     const data = new FormData(form);
+    data.append("access_key", "432d0bb8-452a-47ca-b90f-94ea45ce31fa");
 
     try {
-      const res = await fetch("https://formspree.io/f/mzdkkpgl", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) {
-        toast({ title: "Message sent!", description: "We'll get back to you soon." });
+      const json = await res.json();
+      if (res.ok && json.success) {
         form.reset();
+        setSent(true);
         setShowForm(false);
       } else {
-        toast({ title: "Failed to send", description: "Please try again.", variant: "destructive" });
+        toast({ title: "Failed to send", description: json.message || "Please try again.", variant: "destructive" });
       }
     } catch {
       toast({ title: "Network error", description: "Please try again.", variant: "destructive" });
