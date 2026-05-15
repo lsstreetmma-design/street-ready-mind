@@ -19,7 +19,7 @@ const Index = () => {
 
       <footer className="py-6 text-center text-primary text-sm border-t border-border space-y-2">
         <p>For enquiries: LS-STREET-MMA@hotmail.com / +44 7407 007748</p>
-        <p>© 2026 LS Street MMA. All rights reserved.</p>
+        <p className="text-white font-bold">© 2026 LS Street MMA. All rights reserved.</p>
       </footer>
     </div>
   );
