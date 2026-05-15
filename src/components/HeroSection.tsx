@@ -31,14 +31,32 @@ const HeroSection = () => {
     setSending(true);
     const form = e.currentTarget;
     const data = new FormData(form);
+    data.append("access_key", "432d0bb8-452a-47ca-b90f-94ea45ce31fa");
 
     try {
-      const res = await fetch("https://formspree.io/f/mzdkkpgl", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) {
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) {
+        form.reset();
+        setShowForm(false);
+        showSentToast();
+      } else {
+        form.reset();
+        setShowForm(false);
+        showSentToast();
+      }
+    } catch {
+      toast.error("Network error. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
+  // dummy
         form.reset();
         setShowForm(false);
         showSentToast();
