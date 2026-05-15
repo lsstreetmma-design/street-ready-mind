@@ -12,6 +12,7 @@ const ContactSection = () => {
   const { toast } = useToast();
 
   const openForm = () => {
+    setSent(false);
     setShowForm(true);
     setTimeout(() => {
       formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
