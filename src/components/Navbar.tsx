@@ -2,8 +2,11 @@ import banner from "@/assets/banner.png";
 
 const Navbar = () => {
   return (
-    <nav className="absolute top-0 left-0 w-full z-50">
-      <div className="w-full flex justify-center">
+    <nav
+      className="w-full m-0 p-0"
+      style={{ backgroundColor: "#000000" }}
+    >
+      <div className="w-full flex justify-center m-0 p-0" style={{ backgroundColor: "#000000" }}>
         <img
           src={banner}
           alt="LS Street MMA - Self Defence"
