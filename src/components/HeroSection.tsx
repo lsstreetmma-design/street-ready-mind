@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import banner from "@/assets/banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -98,8 +99,13 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <div className="flex flex-col items-center gap-y-20">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-4 md:pt-6">
+        <img
+          src={banner}
+          alt="LS Street MMA - Self Defence"
+          className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
+        />
+        <div className="flex flex-col items-center gap-y-20 max-w-3xl mx-auto text-center mt-8 md:mt-12">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
               <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
