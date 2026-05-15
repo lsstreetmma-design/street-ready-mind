@@ -10,7 +10,7 @@ const Navbar = () => {
         <img
           src={banner}
           alt="LS Street MMA - Self Defence"
-          className="block w-full h-auto object-cover"
+          className="block w-full h-24 md:h-28 object-cover"
         />
       </div>
     </nav>
