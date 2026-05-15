@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
