@@ -115,7 +115,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div ref={formRef} className="w-full flex justify-center">
+          <div ref={formRef} className="relative z-20 w-full flex justify-center">
             {showForm ? (
               <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in w-full max-w-lg">
                 <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
@@ -142,7 +142,7 @@ const HeroSection = () => {
             ) : (
               <button
                 onClick={handleOpenForm}
-                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105"
+                className="relative z-20 inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105 cursor-pointer"
                 style={{
                   boxShadow:
                     "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
