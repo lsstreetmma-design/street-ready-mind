@@ -72,12 +72,12 @@ const HeroSection = () => {
             "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.95) 100%)",
         }}
       />
-      {/* Top fade into navbar */}
+      {/* Subtle top shadow to let logo emerge */}
       <div
-        className="absolute inset-x-0 top-0 h-40 pointer-events-none"
+        className="absolute inset-x-0 top-0 h-16 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, #000000 0%, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)",
         }}
       />
       {/* Bottom fade into next section */}
