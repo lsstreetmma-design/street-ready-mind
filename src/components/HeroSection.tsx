@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroBanner from "@/assets/hero-banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -58,16 +57,9 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
       style={{ backgroundColor: "#000000" }}
     >
-      <img
-        src={heroBanner}
-        alt="LS Street MMA - Self Defence"
-        className="relative z-10 block w-full h-auto object-cover select-none"
-        draggable={false}
-      />
-      <div className="relative flex-1 flex items-center justify-center pb-24 pt-8">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -174,7 +166,6 @@ const HeroSection = () => {
             ))}
           </ul>
         </div>
-      </div>
       </div>
     </section>
   );

@@ -6,11 +6,11 @@ const Navbar = () => {
       className="w-full m-0 p-0"
       style={{ backgroundColor: "#000000" }}
     >
-      <div className="w-full m-0 p-0" style={{ backgroundColor: "#000000" }}>
+      <div className="w-full flex justify-center m-0 p-0" style={{ backgroundColor: "#000000" }}>
         <img
           src={banner}
           alt="LS Street MMA - Self Defence"
-          className="block w-full h-24 md:h-28 object-contain"
+          className="block h-auto max-h-24 md:max-h-28 w-auto max-w-[90%] object-contain"
         />
       </div>
     </nav>
