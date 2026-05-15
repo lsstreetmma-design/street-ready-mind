@@ -115,10 +115,6 @@ const ContactSection = () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-2 text-white">
-            <Phone size={16} className="text-primary" />
-            <span>For enquiries: LS-STREET-MMA@hotmail.com / +44 7407 007748</span>
-          </div>
         </div>
       </div>
     </section>
