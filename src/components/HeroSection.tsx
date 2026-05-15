@@ -55,7 +55,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-24 md:pt-44"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
       style={{ backgroundColor: "#000000" }}
     >
       <div
@@ -96,7 +96,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
         <div className="flex flex-col items-center gap-y-20">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
