@@ -7,10 +7,12 @@ import { useToast } from "@/hooks/use-toast";
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
   const openForm = () => {
+    setSent(false);
     setShowForm(true);
     setTimeout(() => {
       formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -28,19 +30,21 @@ const ContactSection = () => {
     setSending(true);
     const form = e.currentTarget;
     const data = new FormData(form);
+    data.append("access_key", "432d0bb8-452a-47ca-b90f-94ea45ce31fa");
 
     try {
-      const res = await fetch("https://formspree.io/f/mzdkkpgl", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) {
-        toast({ title: "Message sent!", description: "We'll get back to you soon." });
+      const json = await res.json();
+      if (res.ok && json.success) {
         form.reset();
+        setSent(true);
         setShowForm(false);
       } else {
-        toast({ title: "Failed to send", description: "Please try again.", variant: "destructive" });
+        toast({ title: "Failed to send", description: json.message || "Please try again.", variant: "destructive" });
       }
     } catch {
       toast({ title: "Network error", description: "Please try again.", variant: "destructive" });
@@ -93,6 +97,11 @@ const ContactSection = () => {
                   </button>
                 </div>
               </form>
+            ) : sent ? (
+              <div className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-center animate-fade-in w-full max-w-lg">
+                <h3 className="font-heading text-2xl font-bold text-gradient-orange mb-2">Message Sent!</h3>
+                <p className="text-white">We'll get back to you shortly.</p>
+              </div>
             ) : (
               <button
                 onClick={openForm}
