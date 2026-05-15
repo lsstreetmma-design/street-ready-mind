@@ -97,6 +97,11 @@ const ContactSection = () => {
                   </button>
                 </div>
               </form>
+            ) : sent ? (
+              <div className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-center animate-fade-in w-full max-w-lg">
+                <h3 className="font-heading text-2xl font-bold text-gradient-orange mb-2">Message Sent!</h3>
+                <p className="text-white">We'll get back to you shortly.</p>
+              </div>
             ) : (
               <button
                 onClick={openForm}
