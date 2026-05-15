@@ -18,7 +18,7 @@ const Index = () => {
       <ContactSection />
 
       <footer className="py-6 text-center text-primary text-sm border-t border-border space-y-2">
-        <p className="text-white font-bold">For enquiries: <span className="underline">LS-STREET-MMA@hotmail.com</span> / +44 7407 007748</p>
+        <p className="text-white font-bold">For enquiries: <a href="mailto:LS-STREET-MMA@hotmail.com" className="underline hover:text-primary transition-colors">LS-STREET-MMA@hotmail.com</a> / +44 7407 007748</p>
         <p className="text-white font-bold">© 2026 LS Street MMA. All rights reserved.</p>
       </footer>
     </div>
