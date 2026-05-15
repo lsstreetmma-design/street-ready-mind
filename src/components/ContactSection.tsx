@@ -43,6 +43,7 @@ const ContactSection = () => {
         form.reset();
         setSent(true);
         setShowForm(false);
+        setTimeout(() => setSent(false), 3000);
       } else {
         toast({ title: "Failed to send", description: json.message || "Please try again.", variant: "destructive" });
       }
@@ -98,14 +99,15 @@ const ContactSection = () => {
                 </div>
               </form>
             ) : sent ? (
-              <div className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-center animate-fade-in w-full max-w-lg">
-                <h3 className="font-heading text-2xl font-bold text-gradient-orange mb-2">Message Sent!</h3>
+              <div className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-center animate-fade-in w-full max-w-lg flex flex-col items-center">
+                <Check className="text-green-400 mb-3" size={56} strokeWidth={3} />
+                <h3 className="font-heading text-2xl font-bold text-gradient-orange mb-2">MESSAGE SENT!</h3>
                 <p className="text-white">We'll get back to you shortly.</p>
               </div>
             ) : (
               <button
                 onClick={openForm}
-                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105 animate-fade-in"
               >
                 BOOK YOUR SESSION NOW
               </button>
