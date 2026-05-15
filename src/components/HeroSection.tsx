@@ -45,23 +45,7 @@ const HeroSection = () => {
         setShowForm(false);
         showSentToast();
       } else {
-        form.reset();
-        setShowForm(false);
-        showSentToast();
-      }
-    } catch {
-      toast.error("Network error. Please try again.");
-    } finally {
-      setSending(false);
-    }
-  };
-
-  // dummy
-        form.reset();
-        setShowForm(false);
-        showSentToast();
-      } else {
-        toast.error("Failed to send. Please try again.");
+        toast.error(json.message || "Failed to send. Please try again.");
       }
     } catch {
       toast.error("Network error. Please try again.");
