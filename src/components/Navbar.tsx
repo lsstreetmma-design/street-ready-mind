@@ -10,7 +10,7 @@ const Navbar = () => {
         <img
           src={banner}
           alt="LS Street MMA - Self Defence"
-          className="block h-auto max-h-24 md:max-h-28 w-auto max-w-[90%] object-contain"
+          className="block h-auto max-h-48 md:max-h-64 lg:max-h-72 w-auto max-w-[95%] object-contain"
         />
       </div>
     </nav>
