@@ -1,18 +1,16 @@
 import { useState, useEffect, useRef } from "react";
-import { Phone, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { showSentToast } from "@/lib/sent-toast";
+import { toast } from "sonner";
 
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
-  const { toast } = useToast();
 
   const openForm = () => {
-    setSent(false);
     setShowForm(true);
     setTimeout(() => {
       formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -41,14 +39,13 @@ const ContactSection = () => {
       const json = await res.json();
       if (res.ok && json.success) {
         form.reset();
-        setSent(true);
         setShowForm(false);
-        setTimeout(() => setSent(false), 3000);
+        showSentToast();
       } else {
-        toast({ title: "Failed to send", description: json.message || "Please try again.", variant: "destructive" });
+        toast.error(json.message || "Failed to send. Please try again.");
       }
     } catch {
-      toast({ title: "Network error", description: "Please try again.", variant: "destructive" });
+      toast.error("Network error. Please try again.");
     } finally {
       setSending(false);
     }
@@ -98,12 +95,6 @@ const ContactSection = () => {
                   </button>
                 </div>
               </form>
-            ) : sent ? (
-              <div className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-center animate-fade-in w-full max-w-lg flex flex-col items-center">
-                <Check className="text-green-400 mb-3" size={56} strokeWidth={3} />
-                <h3 className="font-heading text-2xl font-bold text-gradient-orange mb-2">MESSAGE SENT!</h3>
-                <p className="text-white">We'll get back to you shortly.</p>
-              </div>
             ) : (
               <button
                 onClick={openForm}

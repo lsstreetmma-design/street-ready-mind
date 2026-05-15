@@ -4,7 +4,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
+import { showSentToast } from "@/lib/sent-toast";
 
 const bookingFeatures = [
   "No experience needed",
@@ -17,7 +18,6 @@ const HeroSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
-  const { toast } = useToast();
 
   const handleOpenForm = () => {
     setShowForm(true);
@@ -39,14 +39,14 @@ const HeroSection = () => {
         headers: { Accept: "application/json" },
       });
       if (res.ok) {
-        toast({ title: "Message sent!", description: "We'll get back to you soon." });
         form.reset();
         setShowForm(false);
+        showSentToast();
       } else {
-        toast({ title: "Failed to send", description: "Please try again.", variant: "destructive" });
+        toast.error("Failed to send. Please try again.");
       }
     } catch {
-      toast({ title: "Network error", description: "Please try again.", variant: "destructive" });
+      toast.error("Network error. Please try again.");
     } finally {
       setSending(false);
     }
