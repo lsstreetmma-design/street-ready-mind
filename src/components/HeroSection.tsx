@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import banner from "@/assets/banner.png";
