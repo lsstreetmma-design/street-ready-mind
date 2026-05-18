@@ -13,6 +13,12 @@ const About = () => {
 
           <div className="border-t border-grit mb-10 mx-auto w-24" />
 
+          <img
+            src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop"
+            alt="MMA training placeholder"
+            className="mx-auto mb-10 w-full max-w-md rounded-xl object-cover shadow-lg md:max-w-lg"
+          />
+
           <div className="space-y-5 text-white font-body text-base md:text-lg leading-relaxed">
             <p>
               I'm the founder and head coach at LS Street MMA. My focus is simple: teach
