@@ -1,7 +1,17 @@
 import Navbar from "@/components/Navbar";
 import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
 
 const About = () => {
+  const symptoms = [
+    "Rapid breathing caused by an adrenaline dump",
+    "Narrow vision",
+    "A feeling of being frozen",
+    "Fine motor skills breaking down",
+    "Complex techniques failing",
+    "Fear taking over",
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -41,6 +51,29 @@ const About = () => {
               looking to sharpen real-world skills, my goal is to help you move with
               confidence, awareness, and control.
             </p>
+            <p className="mt-6">
+              I founded LS Street MMA because I saw a gap between what's being taught and what actually happens when violence finds you.
+            </p>
+            <p>
+              If you've ever been in a physical confrontation, you will have experienced these symptoms:
+            </p>
+
+            <ul className="space-y-2">
+              {symptoms.map((symptom) => (
+                <li key={symptom} className="flex items-start gap-3">
+                  <Check className="text-primary mt-1 shrink-0" size={18} />
+                  <span>{symptom}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-6">
+              I didn't start training to compete. Referees and rules don't exist in real confrontations — I don't train for points. I wanted to know — without doubt — that I could defend myself if it ever came to it.
+            </p>
+            <p>
+              Because freezing isn't an option.
+            </p>
+
             <p className="text-foreground font-heading text-xl font-semibold mt-8">
               Train smart. Stay aware. Be ready.
             </p>
