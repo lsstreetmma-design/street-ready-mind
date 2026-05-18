@@ -52,10 +52,6 @@ const About = () => {
               for points. I wanted to know — without doubt — that I could defend myself if it ever came to it.
             </p>
             <p className="text-foreground font-heading text-xl font-semibold mt-8">Because freezing isn't an option.</p>
-
-            <p className="text-foreground font-heading text-xl font-semibold mt-8">
-              Train smart. Stay aware. Be ready.
-            </p>
           </div>
 
           <div className="mt-12 text-center">
