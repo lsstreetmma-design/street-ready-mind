@@ -29,17 +29,14 @@ const About = () => {
             className="mx-auto mb-4 w-full max-w-md rounded-xl object-cover shadow-lg md:max-w-lg"
           />
 
-          <p className="text-center font-heading text-2xl md:text-3xl font-bold text-white mb-10">
-            Lee Sommers
-          </p>
+          <p className="text-center font-heading text-2xl md:text-3xl font-bold text-white mb-10">Lee Sommers</p>
 
           <div className="space-y-5 text-white font-body text-base md:text-lg leading-relaxed">
             <p>
-              I founded LS Street MMA because I saw a gap between what's being taught and what actually happens when violence finds you.
+              I founded LS Street MMA because I saw a gap between what's being taught and what actually happens when
+              violence finds you.
             </p>
-            <p>
-              If you've ever been in a physical confrontation, you will have experienced these symptoms:
-            </p>
+            <p>If you've ever been in a physical confrontation, you will have experienced these symptoms:</p>
 
             <ul className="space-y-2">
               {symptoms.map((symptom) => (
@@ -51,11 +48,10 @@ const About = () => {
             </ul>
 
             <p className="mt-6">
-              I didn't start training to compete. Referees and rules don't exist in real confrontations — I don't train for points. I wanted to know — without doubt — that I could defend myself if it ever came to it.
+              I didn't start training to compete. Referees and rules don't exist in real confrontations — I don't train
+              for points. I wanted to know — without doubt — that I could defend myself if it ever came to it.
             </p>
-            <p>
-              Because freezing isn't an option.
-            </p>
+            <p className="text-foreground font-heading text-xl font-semibold mt-8">Because freezing isn't an option.</p>
 
             <p className="text-foreground font-heading text-xl font-semibold mt-8">
               Train smart. Stay aware. Be ready.
