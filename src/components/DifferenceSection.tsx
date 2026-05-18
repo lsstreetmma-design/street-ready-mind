@@ -7,7 +7,7 @@ const DifferenceSection = () => {
     >
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-gradient-orange leading-tight">
-          THIS IS WHERE LS STREET MMA IS DIFFERENT
+          WHY IS LS STREET MMA DIFFERENT FROM OTHER CLASSES?
         </h2>
 
         <div className="border-t border-grit mb-12 mx-auto w-24" />
