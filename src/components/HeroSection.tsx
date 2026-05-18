@@ -20,6 +20,13 @@ const HeroSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
+  const { pathname } = useLocation();
+
+  const navLinks = [
+    { to: "/", label: "HOME" },
+    { to: "/about", label: "ABOUT ME" },
+    { to: "/gallery", label: "GALLERY" },
+  ];
 
   const handleOpenForm = () => {
     setShowForm(true);
