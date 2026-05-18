@@ -133,7 +133,7 @@ const HeroSection = () => {
           </ul>
         </div>
       </div>
-      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-28 md:pt-44 lg:pt-52">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-44 md:pt-60 lg:pt-72">
         <div className="flex flex-col items-center gap-y-8 md:gap-y-20 max-w-3xl mx-auto text-center mt-2 md:mt-8 lg:mt-12">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
