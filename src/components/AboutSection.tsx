@@ -11,23 +11,23 @@ const AboutSection = () => {
         <div className="space-y-6 text-white font-body text-base md:text-lg leading-relaxed">
           <div className="space-y-4 mb-8">
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>How to stay calm under pressure</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You'll learn real confidence — not false confidence</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You'll lean simple & reliable skills, which work when real chaos strikes</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You will build awareness & decision-making in real time</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You will build a mindset that doesn't freeze when things go wrong</span>
             </div>
           </div>
