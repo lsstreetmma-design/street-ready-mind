@@ -72,16 +72,3 @@
     border-image: linear-gradient(90deg, transparent, hsl(27 100% 50% / 0.5), transparent) 1;
   }
 }
-@layer base {
-  /* Hide Lovable Watermark Badge */
-  [class*="lovable"],
-  [id*="lovable"],
-  a[href*="lovable.dev"],
-  div[style*="z-index: 2147483647"],
-  .lovable-badge {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-}
