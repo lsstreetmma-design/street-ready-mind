@@ -107,12 +107,31 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="absolute top-0 left-0 right-0 z-20 w-full flex justify-center px-4 pt-2">
+      <div className="absolute top-0 left-0 right-0 z-20 w-full flex flex-col items-center px-4 pt-2">
         <img
           src={banner}
           alt="LS Street MMA - Self Defence"
           className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
         />
+        <div className="w-full mt-3 border-y border-primary/60 bg-zinc-900/80 backdrop-blur-sm">
+          <ul className="container mx-auto flex items-center justify-center flex-wrap gap-x-2 sm:gap-x-6 md:gap-x-10">
+            {navLinks.map((link) => {
+              const active = pathname === link.to;
+              return (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className={`block px-3 sm:px-5 py-2.5 font-heading tracking-widest text-sm sm:text-base transition-colors ${
+                      active ? "text-primary" : "text-white hover:text-primary"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
       <div className="relative z-10 w-full flex flex-col items-center px-4 pt-28 md:pt-44 lg:pt-52">
         <div className="flex flex-col items-center gap-y-8 md:gap-y-20 max-w-3xl mx-auto text-center mt-2 md:mt-8 lg:mt-12">
