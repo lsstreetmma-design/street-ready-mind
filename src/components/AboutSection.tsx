@@ -11,23 +11,23 @@ const AboutSection = () => {
         <div className="space-y-6 text-white font-body text-base md:text-lg leading-relaxed">
           <div className="space-y-4 mb-8">
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>How to stay calm under pressure</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You'll learn real confidence — not false confidence</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You'll lean simple & reliable skills, which work when real chaos strikes</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You will build awareness & decision-making in real time</span>
             </div>
             <div className="flex items-start gap-3">
-              <span className="text-primary mt-1">✓</span>
+              <span className="text-primary font-bold mt-1">✓</span>
               <span>You will build a mindset that doesn't freeze when things go wrong</span>
             </div>
           </div>
@@ -43,10 +43,10 @@ const AboutSection = () => {
             REAL VIOLENCE IS:
           </p>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-1 text-white font-semibold">
-            <span><span className="text-primary">✓</span> Messy.</span>
-            <span><span className="text-primary">✓</span> Fast.</span>
-            <span><span className="text-primary">✓</span> Unpredictable.</span>
+          <div className="flex flex-wrap gap-x-6 gap-y-1 font-semibold">
+            <span className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Messy.</span>
+            <span className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Fast.</span>
+            <span className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Unpredictable.</span>
           </div>
         </div>
       </div>
