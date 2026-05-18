@@ -107,13 +107,8 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="absolute top-0 left-0 right-0 z-20 w-full flex flex-col items-center px-4 pt-2">
-        <img
-          src={banner}
-          alt="LS Street MMA - Self Defence"
-          className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
-        />
-        <div className="w-full -mt-1 border-y border-primary/60 bg-zinc-900/80 backdrop-blur-sm">
+      <div className="absolute top-0 left-0 right-0 z-20 w-full flex flex-col items-center">
+        <div className="w-full border-b border-primary/60 bg-zinc-900/80 backdrop-blur-sm">
           <ul className="container mx-auto flex items-center justify-center flex-wrap gap-x-2 sm:gap-x-6 md:gap-x-10">
             {navLinks.map((link) => {
               const active = pathname === link.to;
@@ -132,6 +127,11 @@ const HeroSection = () => {
             })}
           </ul>
         </div>
+        <img
+          src={banner}
+          alt="LS Street MMA - Self Defence"
+          className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain mt-2"
+        />
       </div>
       <div className="relative z-10 w-full flex flex-col items-center px-4 pt-44 md:pt-60 lg:pt-72">
         <div className="flex flex-col items-center gap-y-8 md:gap-y-20 max-w-3xl mx-auto text-center mt-2 md:mt-8 lg:mt-12">
