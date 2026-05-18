@@ -113,7 +113,7 @@ const HeroSection = () => {
           alt="LS Street MMA - Self Defence"
           className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
         />
-        <div className="w-full mt-3 border-y border-primary/60 bg-zinc-900/80 backdrop-blur-sm">
+        <div className="w-full -mt-1 border-y border-primary/60 bg-zinc-900/80 backdrop-blur-sm">
           <ul className="container mx-auto flex items-center justify-center flex-wrap gap-x-2 sm:gap-x-6 md:gap-x-10">
             {navLinks.map((link) => {
               const active = pathname === link.to;
