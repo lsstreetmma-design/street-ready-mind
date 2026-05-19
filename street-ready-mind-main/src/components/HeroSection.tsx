@@ -1,0 +1,182 @@
+import { useState, useRef } from "react";
+import { Check } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import banner from "@/assets/banner.png";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
+import { toast } from "sonner";
+import { showSentToast } from "@/lib/sent-toast";
+
+const bookingFeatures = [
+  "No experience needed",
+  "1:1 Pressure-Tested Coaching • £35/hr",
+  "Train at your pace",
+  "Knife threat awareness & defence principles",
+];
+
+const HeroSection = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [sending, setSending] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const handleOpenForm = () => {
+    setShowForm(true);
+    setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 50);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    data.append("access_key", "432d0bb8-452a-47ca-b90f-94ea45ce31fa");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) {
+        form.reset();
+        setShowForm(false);
+        showSentToast();
+      } else {
+        toast.error(json.message || "Failed to send. Please try again.");
+      }
+    } catch {
+      toast.error("Network error. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-24"
+      style={{ backgroundColor: "#000000" }}
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      {/* Vignette overlay for readability */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.95) 100%)",
+        }}
+      />
+      {/* Top fade into navbar */}
+      <div
+        className="absolute inset-x-0 top-0 h-40 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, #000000 0%, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%)",
+        }}
+      />
+      {/* Bottom fade into next section */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, #000000 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%)",
+        }}
+      />
+
+      {/* Radial focal glow behind CTA */}
+      <div
+        className="absolute inset-x-0 bottom-0 top-1/3 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 50% 55% at 50% 75%, hsl(27 100% 50% / 0.18) 0%, hsl(27 100% 50% / 0.06) 35%, transparent 70%)",
+        }}
+      />
+
+      <div className="absolute top-0 left-0 right-0 z-20 w-full flex justify-center px-4 pt-2">
+        <img
+          src={banner}
+          alt="LS Street MMA - Self Defence"
+          className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
+        />
+      </div>
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-20 md:pt-44 lg:pt-52">
+        <div className="flex flex-col items-center gap-y-6 md:gap-y-20 max-w-3xl mx-auto text-center -mt-8 md:mt-8 lg:mt-12">
+          <div>
+            <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
+              <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
+                Learn How to Defend Yourself
+              </span>
+              <span className="block text-foreground uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.06em]">
+                In The Real World
+              </span>
+            </h2>
+
+            <p className="text-foreground text-base md:text-lg max-w-xl mx-auto font-body">
+              <span className="text-foreground font-semibold">Practical. Realistic.</span> <span className="text-white font-semibold">Pressure-tested self defence training designed for</span> <span className="text-foreground font-semibold">real-life violence</span> <span className="text-white">— not sport, not fantasy.</span>
+            </p>
+          </div>
+
+          <div ref={formRef} className="relative z-20 w-full flex justify-center">
+            {showForm ? (
+              <form onSubmit={handleSubmit} className="bg-card/80 backdrop-blur border border-primary/30 rounded-lg p-6 text-left space-y-4 animate-fade-in w-full max-w-lg">
+                <h3 className="font-heading text-xl font-bold text-gradient-orange">Send Us a Message</h3>
+                <Input name="name" placeholder="Your Name" required className="bg-background" />
+                <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
+                <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
+                <div className="flex gap-3">
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading tracking-widest px-8 py-3 rounded transition-all glow-orange hover:scale-105 disabled:opacity-50"
+                  >
+                    {sending ? "SENDING..." : "SEND"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowForm(false)}
+                    className="border border-border text-muted-foreground hover:text-foreground px-6 py-3 rounded transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <button
+                onClick={handleOpenForm}
+                className="relative z-20 inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105 cursor-pointer"
+                style={{
+                  boxShadow:
+                    "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
+                  textShadow: "0 1px 2px hsl(0 0% 0% / 0.35)",
+                }}
+              >
+                BOOK YOUR SESSION
+              </button>
+            )}
+          </div>
+
+          <ul className="mt-4 md:mt-12 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
+            {bookingFeatures.map((f) => (
+              <li
+                key={f}
+                className="flex items-start gap-2 text-white text-sm leading-snug"
+              >
+                <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
