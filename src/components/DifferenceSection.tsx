@@ -15,15 +15,24 @@ const DifferenceSection = () => {
         <div className="space-y-8 text-white font-body text-base md:text-lg leading-loose">
           <p>
             We don't train for perfect conditions. We train for reality.
-          </p>
-          <p>
-            That includes understanding the reality of weapons — especially knives. Not fantasy disarms. Not choreographed sequences. But awareness, avoidance, positioning, and last-resort survival principles when escape isn't immediately possible.
+            <br />
+            That includes understanding the reality of weapons — especially knives.
+            <br />
+            <br />
+            Not fantasy disarms.
+            <br />
+            Not choreographed sequences.
+            <br />
+            <br />
+            But awareness, avoidance, positioning, and last-resort survival principles
+            <br />
+            when escape isn’t immediately possible.
           </p>
           <p>
             We train how to stay functional under pressure — how to think, move, and act when everything feels chaotic.
           </p>
           <p>
-            We strip things back to what actually works — simple, effective movements you can rely on when stress hits.
+            We strip things back to what actually works — simple effective movements you can rely on when stress hits.
           </p>
           <p className="text-foreground font-heading text-xl md:text-2xl font-semibold tracking-wide">
             Then we pressure-test it.

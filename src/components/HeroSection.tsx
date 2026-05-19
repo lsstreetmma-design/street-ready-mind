@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import banner from "@/assets/banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -57,7 +58,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-24"
       style={{ backgroundColor: "#000000" }}
     >
       <div
@@ -98,8 +99,15 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <div className="flex flex-col items-center gap-y-20">
+      <div className="absolute top-0 left-0 right-0 z-20 w-full flex justify-center px-4 pt-2">
+        <img
+          src={banner}
+          alt="LS Street MMA - Self Defence"
+          className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
+        />
+      </div>
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-28 md:pt-44 lg:pt-52">
+        <div className="flex flex-col items-center gap-y-8 md:gap-y-20 max-w-3xl mx-auto text-center mt-2 md:mt-8 lg:mt-12">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
               <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
@@ -154,7 +162,7 @@ const HeroSection = () => {
             )}
           </div>
 
-          <ul className="mt-12 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
+          <ul className="mt-4 md:mt-12 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
             {bookingFeatures.map((f) => (
               <li
                 key={f}

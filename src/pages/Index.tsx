@@ -9,7 +9,6 @@ import ConfidenceSection from "@/components/ConfidenceSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <HeroSection />
       <AboutSection />
       <DifferenceSection />
