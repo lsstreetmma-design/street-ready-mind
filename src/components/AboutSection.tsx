@@ -32,9 +32,9 @@ const AboutSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-x-6 gap-y-1 text-white font-semibold">
-            <span><span className="text-primary">✓</span> It's messy.</span>
-            <span><span className="text-primary">✓</span> It's fast.</span>
-            <span><span className="text-primary">✓</span> It's unpredictable.</span>
+            <span><span className="text-primary">✓</span>&nbsp;Messy.</span>
+            <span><span className="text-primary">✓</span>&nbsp;Fast.</span>
+            <span><span className="text-primary">✓</span>&nbsp;Unpredictable.</span>
           </div>
 
           <p className="mt-6">
