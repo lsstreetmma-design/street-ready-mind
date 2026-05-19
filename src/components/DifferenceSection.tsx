@@ -17,6 +17,9 @@ const DifferenceSection = () => {
             We don't train for perfect conditions. We train for reality.
           </p>
           <p>
+            That includes understanding the reality of weapons — especially knives. Not fantasy disarms. Not choreographed sequences. But awareness, avoidance, positioning, and last-resort survival principles when escape isn't immediately possible.
+          </p>
+          <p>
             We train how to stay functional under pressure — how to think, move, and act when everything feels chaotic.
           </p>
           <p>
