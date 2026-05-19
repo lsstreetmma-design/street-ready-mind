@@ -7,7 +7,7 @@ const DifferenceSection = () => {
     >
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-gradient-orange leading-tight">
-          WHY IS LS STREET MMA DIFFERENT FROM OTHER CLASSES?
+          THIS IS WHERE LS STREET MMA IS DIFFERENT
         </h2>
 
         <div className="border-t border-grit mb-12 mx-auto w-24" />
@@ -15,26 +15,12 @@ const DifferenceSection = () => {
         <div className="space-y-8 text-white font-body text-base md:text-lg leading-loose">
           <p>
             We don't train for perfect conditions. We train for reality.
-            <br />
-            <br />
-            <br />
-            That includes understanding the reality of weapons — especially knives.
-            <br />
-            <br />
-            Not fantasy disarms.
-            <br />
-            Not choreographed sequences.
-            <br />
-            <br />
-            But awareness, avoidance, positioning, and last-resort survival principles
-            <br />
-            when escape isn’t immediately possible.
           </p>
           <p>
             We train how to stay functional under pressure — how to think, move, and act when everything feels chaotic.
           </p>
           <p>
-            We strip things back to what actually works — simple effective movements you can rely on when stress hits.
+            We strip things back to what actually works — simple, effective movements you can rely on when stress hits.
           </p>
           <p className="text-foreground font-heading text-xl md:text-2xl font-semibold tracking-wide">
             Then we pressure-test it.
