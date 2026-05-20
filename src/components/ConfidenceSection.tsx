@@ -37,7 +37,13 @@ const ConfidenceSection = () => {
 
         <div className="space-y-5 text-white text-base md:text-lg leading-relaxed">
           <p>
-            When you know you can defend yourself, you walk differently. You carry yourself differently. You think differently.
+            When you know you can defend yourself, you walk differently.
+            <br />
+            <br />
+            <br />
+            You carry yourself differently.
+            <br />
+            You think differently.
           </p>
           <p>
             You're not hoping you'll be okay.
