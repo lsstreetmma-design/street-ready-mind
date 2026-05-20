@@ -21,7 +21,7 @@ const AboutSection = () => {
 
         <div className="space-y-5 text-white font-body text-base md:text-lg leading-relaxed">
           <p>
-            Self-defence classes give a false sense of security. It's clean, controlled, and predictable — but real situations aren't.
+            Often Self-defence classes give a false sense of security. It's clean, controlled, and predictable — but real situations aren't.
           </p>
           <p>
             Real violence is sudden, chaotic, and overwhelming. There are no warm-ups. No rules. No second chances.
