@@ -16,6 +16,8 @@ const DifferenceSection = () => {
           <p>
             We don't train for perfect conditions. We train for reality.
             <br />
+            <br />
+            <br />
             That includes understanding the reality of weapons — especially knives.
             <br />
             <br />
