@@ -32,7 +32,7 @@ const DifferenceSection = () => {
             We train how to stay functional under pressure — how to think, move, and act when everything feels chaotic.
           </p>
           <p>
-            We strip things back to what actually works — simple effective movements you can rely on when stress hits.
+            We strip things back to what actually works — simple, effective movements you can rely on when stress hits.
           </p>
           <p className="text-foreground font-heading text-xl md:text-2xl font-semibold tracking-wide">
             Then we pressure-test it.

@@ -37,6 +37,10 @@ const AboutSection = () => {
             <span><span className="text-primary">✓</span>&nbsp;Unpredictable.</span>
           </div>
 
+          <p className="mt-6 font-heading text-xl font-semibold text-foreground">
+            And sometimes — weapons are involved.
+          </p>
+
           <p className="mt-6">
             I founded LS Street MMA because I saw a gap between what's being taught and what actually happens when violence finds you.
           </p>
