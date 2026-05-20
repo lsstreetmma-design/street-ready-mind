@@ -13,21 +13,12 @@ const DifferenceSection = () => {
         <div className="border-t border-grit mb-12 mx-auto w-24" />
 
         <div className="space-y-8 text-white font-body text-base md:text-lg leading-loose">
-          <p>
-            We don't train for perfect conditions. We train for reality.
-            <br />
-            <br />
-            <br />
-            That includes understanding the reality of weapons — especially knives.
-            <br />
-            <br />
-            Not fantasy disarms.
-            <br />
-            Not choreographed sequences.
-            <br />
-            <br />
-            But awareness, avoidance, positioning, and last-resort survival principles
-            <br />
+          <p className="whitespace-pre-line">
+            We don't train for perfect conditions. We train for reality.{"\n\n\n"}
+            That includes understanding the reality of weapons — especially knives.{"\n\n"}
+            Not fantasy disarms.{"\n"}
+            Not choreographed sequences.{"\n\n"}
+            But awareness, avoidance, positioning, and last-resort survival principles{"\n"}
             when escape isn’t immediately possible.
           </p>
           <p>
