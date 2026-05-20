@@ -6,6 +6,7 @@ const building = [
   "Simple, reliable skills that hold up in chaos",
   "Awareness and decision-making in real time",
   "A mindset that doesn't freeze when things go wrong",
+  "Understanding of weapon threats and how to respond under pressure",
 ];
 
 const ConfidenceSection = () => {
@@ -39,7 +40,10 @@ const ConfidenceSection = () => {
             When you know you can defend yourself, you walk differently. You carry yourself differently. You think differently.
           </p>
           <p>
-            You're not hoping you'll be okay. You know you will be.
+            You're not hoping you'll be okay.
+          </p>
+          <p>
+            You know you will be.
           </p>
         </div>
       </div>
