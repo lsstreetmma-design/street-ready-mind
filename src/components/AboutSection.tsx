@@ -28,9 +28,9 @@ const AboutSection = () => {
           </p>
 
           <div className="space-y-1 text-white font-semibold mt-6">
-            <p>It's messy.</p>
-            <p>It's fast.</p>
-            <p>It's unpredictable.</p>
+            <p>It's Messy.</p>
+            <p>It's Fast.</p>
+            <p>It's Unpredictable.</p>
           </div>
 
 
