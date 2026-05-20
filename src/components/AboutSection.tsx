@@ -27,15 +27,12 @@ const AboutSection = () => {
             Real violence is sudden, chaotic, and overwhelming. There are no warm-ups. No rules. No second chances.
           </p>
 
-          <p className="text-foreground font-heading text-xl font-semibold mt-6">
-            REAL VIOLENCE IS:
-          </p>
-
-          <div className="flex flex-wrap gap-x-6 gap-y-1 text-white font-semibold">
-            <span><span className="text-primary">✓</span>&nbsp;Messy.</span>
-            <span><span className="text-primary">✓</span>&nbsp;Fast.</span>
-            <span><span className="text-primary">✓</span>&nbsp;Unpredictable.</span>
+          <div className="space-y-1 text-white font-semibold mt-6">
+            <p>It's messy.</p>
+            <p>It's fast.</p>
+            <p>It's unpredictable.</p>
           </div>
+
 
           <p className="mt-6 font-heading text-xl font-semibold text-foreground">
             And sometimes — weapons are involved.
