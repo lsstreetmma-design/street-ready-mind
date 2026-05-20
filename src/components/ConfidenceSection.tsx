@@ -36,13 +36,9 @@ const ConfidenceSection = () => {
         </h3>
 
         <div className="space-y-5 text-white text-base md:text-lg leading-relaxed">
-          <p>
-            When you know you can defend yourself, you walk differently.
-            <br />
-            <br />
-            <br />
-            You carry yourself differently.
-            <br />
+          <p className="whitespace-pre-line">
+            When you know you can defend yourself, you walk differently.{"\n\n\n"}
+            You carry yourself differently.{"\n"}
             You think differently.
           </p>
           <p>
