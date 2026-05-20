@@ -63,14 +63,17 @@ const HeroSection = () => {
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
+        }}
       />
       {/* Vignette overlay for readability */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.35) 70%, rgba(0,0,0,0.7) 100%)",
+            "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0.45) 100%)",
         }}
       />
       {/* Top fade into navbar */}
@@ -78,7 +81,7 @@ const HeroSection = () => {
         className="absolute inset-x-0 top-0 h-40 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0) 100%)",
         }}
       />
       {/* Bottom fade into next section */}
@@ -86,7 +89,7 @@ const HeroSection = () => {
         className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, #000000 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(to top, #000000 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0) 100%)",
         }}
       />
 
