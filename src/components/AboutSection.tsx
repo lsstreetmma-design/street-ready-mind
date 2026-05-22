@@ -11,7 +11,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 bg-[hsl(0,0%,16%)]">
       <div className="container mx-auto max-w-3xl">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-12 text-gradient-orange">
           MOST PEOPLE AREN'T PREPARED FOR VIOLENCE.
