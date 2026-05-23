@@ -33,7 +33,7 @@ const WhoForSection = () => {
           {features.map((f) => (
             <li key={f} className="flex items-start gap-3 text-white">
               <Check className="text-primary mt-1 shrink-0" size={18} />
-              <span>{f}</span>
+              <span className="text-slate-50">{f}</span>
             </li>
           ))}
         </ul>

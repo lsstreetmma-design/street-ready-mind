@@ -49,7 +49,7 @@ const AboutSection = () => {
             {symptoms.map((symptom) => (
               <li key={symptom} className="flex items-start gap-3">
                 <Check className="text-primary mt-1 shrink-0" size={18} />
-                <span>{symptom}</span>
+                <span className="text-slate-50">{symptom}</span>
               </li>
             ))}
           </ul>
