@@ -173,7 +173,7 @@ const HeroSection = () => {
                 className="flex items-start gap-2 text-white text-sm leading-snug"
               >
                 <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
-                <span className={f === "First Session Free" ? "text-base md:text-lg font-bold text-primary" : ""}>
+                <span className={f === "First Session Free" ? "text-base md:text-lg font-bold text-primary" : "text-slate-50"}>
                   {f.split("£35/hr").map((part, i, arr) => (
                     <span key={i}>
                       {part}
