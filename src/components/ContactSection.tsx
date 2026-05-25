@@ -56,7 +56,7 @@ const ContactSection = () => {
     "1:1 Pressure-Tested Coaching • £35/hr",
     "Train at your pace",
     "Knife threat awareness & defence principles",
-    "First Session Free",
+    "",
   ];
 
   return (
