@@ -67,7 +67,7 @@ const HeroSection = () => {
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: "170% auto",
-          backgroundPosition: "center 55%",
+          backgroundPosition: "center 88%",
           filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
         }}
       />
