@@ -113,7 +113,7 @@ const ContactSection = () => {
                 className="flex items-start gap-2 text-white text-xs leading-snug"
               >
                 <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
-                <span className={f === "First Session Free" ? "text-sm md:text-base font-bold text-primary whitespace-nowrap" : "text-base font-bold text-slate-50 whitespace-nowrap"}>
+                <span className={f === "First Session Free" ? "text-sm md:text-base font-bold text-slate-50 whitespace-nowrap" : "text-base font-bold text-slate-50 whitespace-nowrap"}>
                   {f.split("£35/hr").map((part, i, arr) => (
                     <span key={i}>
                       {part}
