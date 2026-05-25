@@ -16,7 +16,7 @@ const ConfidenceSection = () => {
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
           WHAT YOU'RE BUILDING
         </h2>
-        <p className="text-white text-lg mb-8">
+        <p className="text-slate-50 text-lg mb-8">
           You're not just learning techniques. You're building:
         </p>
 
