@@ -106,14 +106,14 @@ const ContactSection = () => {
             )}
           </div>
 
-          <ul className="max-w-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 justify-center text-left">
+          <ul className="mt-4 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
             {bookingFeatures.map((f) => (
               <li
                 key={f}
-                className="flex items-start gap-2 text-white text-xs leading-snug"
+                className="flex items-start gap-2 text-white text-sm leading-snug"
               >
-                <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
-                <span className={f === "First Session Free" ? "text-sm md:text-base font-bold text-slate-50 whitespace-nowrap" : "text-base font-bold text-slate-50 whitespace-nowrap"}>
+                <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
+                <span className={f === "First Session Free" ? "text-base md:text-lg font-bold text-slate-50" : "text-base font-bold text-slate-50"}>
                   {f.split("£35/hr").map((part, i, arr) => (
                     <span key={i}>
                       {part}
