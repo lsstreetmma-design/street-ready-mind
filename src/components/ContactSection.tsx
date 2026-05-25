@@ -56,7 +56,7 @@ const ContactSection = () => {
     "1:1 Pressure-Tested Coaching • £35/hr",
     "Train at your pace",
     "Knife threat awareness & defence principles",
-    "",
+    "First Session Free",
   ];
 
   return (
@@ -67,7 +67,7 @@ const ContactSection = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
               Ready to Train?
             </h2>
-            <p className="text-slate-50">
+            <p className="text-white">
               If you're serious about learning real self defence — let's start.
             </p>
           </div>

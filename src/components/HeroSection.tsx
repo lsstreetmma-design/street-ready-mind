@@ -13,7 +13,7 @@ const bookingFeatures = [
   "1:1 Pressure-Tested Coaching • £35/hr",
   "Train at your pace",
   "Knife threat awareness & defence principles",
-  "",
+  "First Session Free",
 ];
 
 const HeroSection = () => {
@@ -63,11 +63,9 @@ const HeroSection = () => {
       style={{ backgroundColor: "#000000" }}
     >
       <div
-        className="absolute inset-0 bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: "185% auto",
-          backgroundPosition: "center 100%",
           filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
         }}
       />
@@ -172,7 +170,7 @@ const HeroSection = () => {
             {bookingFeatures.map((f) => (
               <li
                 key={f}
-                className="flex items-start gap-2 text-sm leading-snug text-slate-50"
+                className="flex items-start gap-2 text-white text-sm leading-snug"
               >
                 <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
                 <span className={f === "First Session Free" ? "text-base md:text-lg font-bold text-primary" : "text-base font-bold text-slate-50"}>
