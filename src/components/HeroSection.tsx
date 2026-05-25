@@ -13,7 +13,7 @@ const bookingFeatures = [
   "1:1 Pressure-Tested Coaching • £35/hr",
   "Train at your pace",
   "Knife threat awareness & defence principles",
-  "First Session Free",
+  "",
 ];
 
 const HeroSection = () => {
@@ -172,7 +172,7 @@ const HeroSection = () => {
             {bookingFeatures.map((f) => (
               <li
                 key={f}
-                className="flex items-start gap-2 text-white text-sm leading-snug"
+                className="flex items-start gap-2 text-sm leading-snug text-slate-50"
               >
                 <Check className="text-primary shrink-0 mt-0.5" size={16} strokeWidth={3} />
                 <span className={f === "First Session Free" ? "text-base md:text-lg font-bold text-primary" : "text-base font-bold text-slate-50"}>
