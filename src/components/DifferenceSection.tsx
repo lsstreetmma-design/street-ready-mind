@@ -12,7 +12,7 @@ const DifferenceSection = () => {
 
         <div className="border-t border-grit mb-12 mx-auto w-24" />
 
-        <div className="space-y-8 text-white font-body text-base md:text-lg leading-loose">
+        <div className="space-y-8 text-slate-50 font-body text-base md:text-lg leading-loose">
           <p className="whitespace-pre-line">
             {`We don't train for perfect conditions. We train for reality.\n\n\nThat includes understanding the reality of weapons — especially knives.\n\nNot fantasy disarms.\nNot choreographed sequences.\n\nBut awareness, avoidance, positioning, and last-resort survival principles\nwhen escape isn’t immediately possible.`}
           </p>

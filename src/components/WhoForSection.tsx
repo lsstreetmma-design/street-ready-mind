@@ -20,7 +20,7 @@ const WhoForSection = () => {
 
         <div className="border-t border-grit mb-10" />
 
-        <div className="space-y-6 text-white font-body text-base md:text-lg leading-relaxed text-center">
+        <div className="space-y-6 text-slate-50 font-body text-base md:text-lg leading-relaxed text-center">
           <p>
             We start from zero — building a solid foundation of movement, awareness, and tactical thinking.
           </p>

@@ -67,7 +67,7 @@ const ContactSection = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
               Ready to Train?
             </h2>
-            <p className="text-white">
+            <p className="text-slate-50">
               If you're serious about learning real self defence — let's start.
             </p>
           </div>
