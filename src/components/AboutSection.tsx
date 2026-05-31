@@ -19,7 +19,7 @@ const AboutSection = () => {
 
         <div className="border-t border-grit mb-10" />
 
-        <div className="space-y-5 text-white font-body text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-slate-100 font-body text-base md:text-lg leading-relaxed">
           <p>
             Often self-defence classes give a false sense of security. It's clean, controlled, and predictable — but real situations aren't.
           </p>
@@ -27,7 +27,7 @@ const AboutSection = () => {
             Real violence is sudden, chaotic, and overwhelming. There are no warm-ups. No rules. No second chances.
           </p>
 
-          <div className="space-y-1 text-white font-semibold mt-6">
+          <div className="space-y-1 text-slate-100 font-semibold mt-6">
             <p>It's Messy.</p>
             <p>It's Fast.</p>
             <p>It's Unpredictable.</p>
