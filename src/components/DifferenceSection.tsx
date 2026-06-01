@@ -2,7 +2,7 @@ const DifferenceSection = () => {
   return (
     <section
       id="different"
-      className="pt-8 pb-12 px-4"
+      className="pt-2 pb-8 px-4"
       style={{ backgroundColor: "hsl(0, 0%, 16%)" }}
     >
       <div className="container mx-auto max-w-3xl text-center">
