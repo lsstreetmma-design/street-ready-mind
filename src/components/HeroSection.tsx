@@ -70,14 +70,12 @@ const HeroSection = () => {
           filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
         }}
       />
-      {/* Vignette overlay for readability */}
+      {/* Dark overlay for text readability */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0.45) 100%)",
-        }}
+        style={{ background: "rgba(0,0,0,0.45)" }}
       />
+
       {/* Top fade into navbar */}
       <div
         className="absolute inset-x-0 top-0 h-40 pointer-events-none"
