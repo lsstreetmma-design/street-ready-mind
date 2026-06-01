@@ -60,13 +60,14 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-start justify-center overflow-hidden py-12 md:py-24"
+      className="relative min-h-[85vh] md:min-h-screen flex items-start justify-center overflow-hidden py-12 md:py-24"
       style={{ backgroundColor: "#000000" }}
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-no-repeat bg-contain md:bg-cover"
         style={{
           backgroundImage: `url(${heroBg})`,
+          backgroundPosition: "center top",
           filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
         }}
       />
