@@ -64,7 +64,7 @@ const HeroSection = () => {
       style={{ backgroundColor: "#000000" }}
     >
       <div
-        className="absolute inset-0 bg-no-repeat bg-contain md:bg-cover"
+        className="absolute inset-0 bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: "center top",
@@ -74,7 +74,7 @@ const HeroSection = () => {
       {/* Dark overlay for text readability */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "rgba(0,0,0,0.45)" }}
+        style={{ background: "rgba(0,0,0,0.35)" }}
       />
 
       {/* Top fade into navbar */}
