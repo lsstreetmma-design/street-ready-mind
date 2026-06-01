@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Check } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBgAsset from "@/assets/hero-background.jpg.asset.json";
+const heroBg = heroBgAsset.url;
 import banner from "@/assets/banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -59,7 +60,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-24"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden py-12 md:py-24"
       style={{ backgroundColor: "#000000" }}
     >
       <div
@@ -69,14 +70,12 @@ const HeroSection = () => {
           filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
         }}
       />
-      {/* Vignette overlay for readability */}
+      {/* Dark overlay for text readability */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0.45) 100%)",
-        }}
+        style={{ background: "rgba(0,0,0,0.45)" }}
       />
+
       {/* Top fade into navbar */}
       <div
         className="absolute inset-x-0 top-0 h-40 pointer-events-none"
@@ -110,8 +109,8 @@ const HeroSection = () => {
           className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
         />
       </div>
-      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-20 md:pt-44 lg:pt-52">
-        <div className="flex flex-col items-center gap-y-6 md:gap-y-20 max-w-3xl mx-auto text-center -mt-8 md:mt-8 lg:mt-12">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-44 md:pt-56 lg:pt-64">
+        <div className="flex flex-col items-center gap-y-8 md:gap-y-16 max-w-3xl mx-auto text-center">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
               <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
