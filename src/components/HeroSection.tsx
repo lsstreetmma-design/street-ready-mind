@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Check } from "lucide-react";
-import heroBg from "@/assets/hero-bg-new.jpeg";
+import heroBg from "@/assets/hero-bg.jpg";
 import banner from "@/assets/banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -63,18 +63,10 @@ const HeroSection = () => {
       style={{ backgroundColor: "#000000" }}
     >
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: "center top",
-        }}
-      />
-      {/* Dark gradient overlay for text readability */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.65) 100%)",
+          filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
         }}
       />
       {/* Vignette overlay for readability */}
