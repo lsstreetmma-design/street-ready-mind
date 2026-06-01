@@ -2,15 +2,15 @@ const DifferenceSection = () => {
   return (
     <section
       id="different"
-      className="py-24 px-4"
+      className="pt-8 pb-12 px-4"
       style={{ backgroundColor: "hsl(0, 0%, 16%)" }}
     >
       <div className="container mx-auto max-w-3xl text-center">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-gradient-orange leading-tight">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-gradient-orange leading-tight">
           THIS IS WHERE LS STREET MMA IS DIFFERENT
         </h2>
 
-        <div className="border-t border-grit mb-12 mx-auto w-24" />
+        <div className="border-t border-grit mb-6 mx-auto w-24" />
 
         <div className="space-y-8 text-white font-body text-base md:text-lg leading-loose">
           <p className="whitespace-pre-line">
