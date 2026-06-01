@@ -63,10 +63,18 @@ const HeroSection = () => {
       style={{ backgroundColor: "#000000" }}
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBg})`,
-          filter: "brightness(1.25) contrast(1.15) saturate(1.05)",
+          backgroundPosition: "center top",
+        }}
+      />
+      {/* Dark gradient overlay for text readability */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.65) 100%)",
         }}
       />
       {/* Vignette overlay for readability */}
