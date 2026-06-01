@@ -9,16 +9,16 @@ const features = [
 
 const WhoForSection = () => {
   return (
-    <section className="py-20 px-4 bg-[hsl(0,0%,16%)]">
+    <section className="pt-8 pb-12 px-4 bg-[hsl(0,0%,16%)]">
       <div className="container mx-auto max-w-3xl">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-gradient-orange">
           WHO THIS IS FOR
         </h2>
-        <p className="text-center font-heading text-xl md:text-2xl font-semibold text-foreground mb-10">
+        <p className="text-center font-heading text-xl md:text-2xl font-semibold text-foreground mb-6">
           No experience? Perfect.
         </p>
 
-        <div className="border-t border-grit mb-10" />
+        <div className="border-t border-grit mb-6" />
 
         <div className="space-y-6 text-white font-body text-base md:text-lg leading-relaxed text-center">
           <p>

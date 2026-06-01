@@ -11,13 +11,13 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 bg-[hsl(0,0%,16%)]">
+    <section id="about" className="pt-8 pb-12 px-4 bg-[hsl(0,0%,16%)]">
       <div className="container mx-auto max-w-3xl">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-12 text-gradient-orange">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-6 text-gradient-orange">
           MOST PEOPLE AREN'T PREPARED FOR VIOLENCE.
         </h2>
 
-        <div className="border-t border-grit mb-10" />
+        <div className="border-t border-grit mb-6" />
 
         <div className="space-y-5 text-slate-100 font-body text-base md:text-lg leading-relaxed">
           <p>
