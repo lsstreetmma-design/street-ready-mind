@@ -64,7 +64,7 @@ const HeroSection = () => {
       style={{ backgroundColor: "#000000" }}
     >
       <div
-        className="absolute inset-x-0 bottom-0 top-48 md:top-64 lg:top-72 bg-no-repeat bg-contain md:bg-cover"
+        className="absolute inset-0 bg-no-repeat bg-contain md:bg-cover"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: "center top",
