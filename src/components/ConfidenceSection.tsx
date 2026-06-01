@@ -30,7 +30,8 @@ const ConfidenceSection = () => {
           ))}
         </ul>
 
-        <div className="my-14 border-t border-grit" />
+        <div className="mt-10" />
+
 
         <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-gradient-orange">
           CONFIDENCE CHANGES EVERYTHING

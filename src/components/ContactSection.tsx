@@ -60,9 +60,9 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-[hsl(0,0%,16%)]">
+    <section id="contact" className="pt-8 pb-12 px-4 bg-[hsl(0,0%,16%)]">
       <div className="container mx-auto max-w-2xl">
-        <div className="flex flex-col items-center gap-y-12 text-center">
+        <div className="flex flex-col items-center gap-y-6 text-center">
           <div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
               Ready to Train?
@@ -106,7 +106,7 @@ const ContactSection = () => {
             )}
           </div>
 
-          <ul className="mt-4 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
+          <ul className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 justify-center text-left">
             {bookingFeatures.map((f) => (
               <li
                 key={f}
