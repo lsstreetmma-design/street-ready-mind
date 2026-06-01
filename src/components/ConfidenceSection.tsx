@@ -35,6 +35,7 @@ const ConfidenceSection = () => {
         <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-gradient-orange">
           CONFIDENCE CHANGES EVERYTHING
         </h3>
+        <div className="border-t border-grit mb-6" />
 
         <div className="space-y-5 text-white text-base md:text-lg leading-relaxed">
           <p className="whitespace-pre-line">
