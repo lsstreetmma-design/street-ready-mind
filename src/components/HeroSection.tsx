@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { Check } from "lucide-react";
 import heroBgAsset from "@/assets/hero-background.jpg.asset.json";
 const heroBg = heroBgAsset.url;
-
+import banner from "@/assets/banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -103,7 +103,14 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-12 md:pt-24 lg:pt-32">
+      <div className="absolute top-0 left-0 right-0 z-20 w-full flex justify-center px-4 pt-2">
+        <img
+          src={banner}
+          alt="LS Street MMA - Self Defence"
+          className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
+        />
+      </div>
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-28 md:pt-40 lg:pt-48">
         <div className="flex flex-col items-center gap-y-8 md:gap-y-16 max-w-3xl mx-auto text-center">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
