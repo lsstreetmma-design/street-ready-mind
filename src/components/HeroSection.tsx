@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { Check } from "lucide-react";
-import heroBgAsset from "@/assets/hero-background.jpg.asset.json";
-const heroBg = heroBgAsset.url;
+import heroBg from "@/assets/hero-background.jpg";
 import banner from "@/assets/banner.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
