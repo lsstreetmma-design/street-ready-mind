@@ -109,7 +109,7 @@ const HeroSection = () => {
           className="block h-auto w-auto max-h-48 md:max-h-64 lg:max-h-72 max-w-[95%] object-contain"
         />
       </div>
-      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-28 md:pt-40 lg:pt-48">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-36 md:pt-48 lg:pt-56">
         <div className="flex flex-col items-center gap-y-8 md:gap-y-16 max-w-3xl mx-auto text-center">
           <div>
             <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
