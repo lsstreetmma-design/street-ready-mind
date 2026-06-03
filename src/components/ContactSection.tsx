@@ -60,7 +60,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="pt-8 pb-12 px-4 bg-[#3E4045]">
+    <section id="contact" className="pt-8 pb-12 px-4 bg-[#6E737B]">
       <div className="container mx-auto max-w-2xl">
         <div className="flex flex-col items-center gap-y-6 text-center">
           <div>
