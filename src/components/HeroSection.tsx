@@ -86,12 +86,13 @@ const HeroSection = () => {
       />
       {/* Bottom fade into next section */}
       <div
-        className="absolute inset-x-0 bottom-0 h-[30vh] pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-[55vh] pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, #565A60 0%, rgba(86,90,96,0.45) 45%, transparent 100%)",
+            "linear-gradient(to bottom, transparent 30%, rgba(86,90,96,0.6) 60%, #565A60 100%)",
         }}
       />
+
 
       {/* Radial focal glow behind CTA */}
       <div
