@@ -59,8 +59,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] md:min-h-screen flex items-start justify-center overflow-hidden py-12 md:py-24"
-      style={{ backgroundColor: "#000000" }}
+      className="relative min-h-[85vh] md:min-h-screen flex items-start justify-center overflow-hidden pt-12 md:pt-24 pb-24 md:pb-40 -mb-16 md:-mb-24"
+      style={{ backgroundColor: "#565A60" }}
     >
       <div
         className="absolute inset-0 bg-no-repeat bg-cover"
@@ -86,10 +86,10 @@ const HeroSection = () => {
       />
       {/* Bottom fade into next section */}
       <div
-        className="absolute inset-x-0 bottom-0 h-[55vh] pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-[65vh] pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, transparent 30%, rgba(86,90,96,0.6) 60%, #565A60 100%)",
+            "linear-gradient(to bottom, rgba(86,90,96,0) 0%, rgba(86,90,96,0.55) 35%, rgba(86,90,96,0.9) 70%, #565A60 90%, #565A60 100%)",
         }}
       />
 
