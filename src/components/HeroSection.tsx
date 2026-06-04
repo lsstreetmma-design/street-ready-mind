@@ -86,10 +86,10 @@ const HeroSection = () => {
       />
       {/* Bottom fade into next section */}
       <div
-        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-[30vh] pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, #000000 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(to top, #565A60 0%, rgba(86,90,96,0.45) 45%, transparent 100%)",
         }}
       />
 
