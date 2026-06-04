@@ -11,7 +11,7 @@ const building = [
 
 const ConfidenceSection = () => {
   return (
-    <section className="pt-2 pb-8 px-4 bg-[#6E737B]">
+    <section className="pt-2 pb-8 px-4 bg-[#565A60]">
       <div className="container mx-auto max-w-2xl text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-gradient-orange">
           WHAT YOU'RE BUILDING

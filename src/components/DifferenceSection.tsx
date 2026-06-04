@@ -3,7 +3,7 @@ const DifferenceSection = () => {
     <section
       id="different"
       className="pt-2 pb-8 px-4"
-      style={{ backgroundColor: "#6E737B" }}
+      style={{ backgroundColor: "#565A60" }}
     >
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-gradient-orange leading-tight">

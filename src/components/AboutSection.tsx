@@ -11,7 +11,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="pt-8 pb-12 px-4 bg-[#6E737B]">
+    <section id="about" className="pt-8 pb-12 px-4 bg-[#565A60]">
       <div className="container mx-auto max-w-3xl">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-6 text-gradient-orange">
           MOST PEOPLE AREN'T PREPARED FOR VIOLENCE.
