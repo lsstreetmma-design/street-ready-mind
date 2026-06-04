@@ -59,8 +59,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] md:min-h-screen flex items-start justify-center overflow-hidden pt-12 md:pt-24 pb-24 md:pb-40 -mb-16 md:-mb-24"
-      style={{ backgroundColor: "#565A60" }}
+      className="relative min-h-[85vh] md:min-h-screen flex items-start justify-center overflow-hidden pt-12 md:pt-24 pb-24 md:pb-40 border-0 m-0"
+      style={{ backgroundColor: "#565A60", boxShadow: "none" }}
     >
       <div
         className="absolute inset-0 bg-no-repeat bg-cover"
