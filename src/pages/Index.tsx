@@ -17,7 +17,7 @@ const Index = () => {
       <ContactSection />
 
       <footer className="py-6 text-center text-primary text-sm border-t border-border space-y-2 bg-black">
-        <p className="text-white font-bold">For enquiries: <a href="mailto:LS-STREET-MMA@hotmail.com" className="underline text-primary hover:opacity-80 transition-opacity">LS-STREET-MMA@hotmail.com</a> / <a href="tel:+447900770404" className="underline text-primary hover:opacity-80 transition-opacity">+44 7900 770404</a></p>
+        <p className="text-white font-bold">For enquiries: <a href="mailto:LS-STREET-MMA@hotmail.com" className="underline text-primary hover:opacity-80 transition-opacity">LS-STREET-MMA@hotmail.com</a> / <a href="tel:+447900770404" className="underline text-primary hover:opacity-80 transition-opacity">+44 7900 770404</a> / Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY</p>
         <p className="text-white font-bold">© 2026 LS Street MMA. All rights reserved.</p>
       </footer>
     </div>
