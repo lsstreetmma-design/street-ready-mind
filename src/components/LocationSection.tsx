@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
-import mapImage from "@/assets/bromley-map.png.asset.json";
 
 const LocationSection = () => {
+  const embedUrl = "https://maps.google.com/maps?q=ChIJ6dDoDGyq2EcRunLgSdGUvY8&output=embed";
   const mapUrl = "https://maps.app.goo.gl/rTJoR7du1xnW8nET8";
 
   return (
