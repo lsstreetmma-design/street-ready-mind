@@ -15,6 +15,7 @@ const Index = () => {
       <DifferenceSection />
       <WhoForSection />
       <ConfidenceSection />
+      <LocationSection />
       <ContactSection />
 
       <footer className="py-6 text-center text-primary text-sm border-t border-border space-y-2 bg-black">
