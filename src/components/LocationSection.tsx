@@ -25,7 +25,7 @@ const LocationSection = () => {
         </div>
         <div className="text-center mt-6">
           <a
-            href="https://maps.app.goo.gl/ChIJ6dDoDGyq2EcRunLgSdGUvY8"
+            href="https://maps.google.com/?cid=10357598344630530746&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-primary font-bold underline hover:opacity-80 transition-opacity"
