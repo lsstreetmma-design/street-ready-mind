@@ -14,6 +14,7 @@ const bookingFeatures = [
   "Train at your pace",
   "Knife threat awareness & defence principles",
   "First Session Free",
+  "Location Flexibility Offered",
 ];
 
 const HeroSection = () => {
