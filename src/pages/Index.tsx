@@ -5,6 +5,7 @@ import DifferenceSection from "@/components/DifferenceSection";
 import WhoForSection from "@/components/WhoForSection";
 import ContactSection from "@/components/ContactSection";
 import ConfidenceSection from "@/components/ConfidenceSection";
+import LocationSection from "@/components/LocationSection";
 
 const Index = () => {
   return (
