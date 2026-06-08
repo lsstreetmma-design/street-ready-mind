@@ -17,26 +17,28 @@ const LocationSection = () => {
           Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY
         </p>
 
-        <div className="w-full rounded-xl overflow-hidden border border-zinc-600/60 mb-6">
-          <img
-            src={mapImage.url}
-            alt="Map showing Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY"
-            className="w-full h-auto block"
-            loading="lazy"
-          />
-        </div>
+        <a
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <div className="w-full rounded-xl overflow-hidden border border-zinc-600/60 mb-6">
+            <img
+              src={mapImage.url}
+              alt="Map showing Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
 
-        <div className="flex justify-center">
-          <a
-            href={mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-primary/90 hover:scale-105 transition-all duration-300 uppercase tracking-wide"
-          >
-            <MapPin size={18} />
-            Open Google Maps
-          </a>
-        </div>
+          <div className="flex justify-center">
+            <span className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-primary/90 hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+              <MapPin size={18} />
+              Open Google Maps
+            </span>
+          </div>
+        </a>
       </div>
     </section>
   );
