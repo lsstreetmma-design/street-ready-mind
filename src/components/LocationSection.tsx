@@ -18,7 +18,7 @@ const LocationSection = () => {
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(0.3) contrast(1.05)" }}
-              allowFullScreen=""
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="LS Street MMA training location – Bromley United Reformed Church"
