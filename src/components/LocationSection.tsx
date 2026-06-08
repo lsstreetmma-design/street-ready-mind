@@ -11,19 +11,21 @@ const LocationSection = () => {
         <p className="text-white text-center mb-8 md:mb-10 text-base md:text-lg">
           Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY
         </p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.653459149029!2d0.0163353!3d51.4093952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8aa6c0ce8d0e9%3A0x8fbd949149e072ca!2sBromley%20United%20Reformed%20Church!5e0!3m2!1sen!2suk!4v1717870000000!5m2!1sen!2suk"
-          width="100%"
-          height="300"
-          style={{ border: 0, borderRadius: "8px" }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="LS Street MMA training location – Bromley United Reformed Church"
-        />
+        <div className="w-full rounded-lg overflow-hidden border border-zinc-700">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?q=Bromley+United+Reformed+Church,+20+Widmore+Rd,+Bromley+BR1+1RY&output=embed"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="LS Street MMA training location – Bromley United Reformed Church"
+          />
+        </div>
         <div className="text-center mt-6">
           <a
-            href="https://maps.app.goo.gl/ChIJ6dDoDGyq2EcRunLgSdGUvY8"
+            href="https://maps.google.com/?cid=10357598344630530746&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-primary font-bold underline hover:opacity-80 transition-opacity"
