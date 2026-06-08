@@ -5,6 +5,7 @@ import DifferenceSection from "@/components/DifferenceSection";
 import WhoForSection from "@/components/WhoForSection";
 import ContactSection from "@/components/ContactSection";
 import ConfidenceSection from "@/components/ConfidenceSection";
+import LocationSection from "@/components/LocationSection";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <DifferenceSection />
       <WhoForSection />
       <ConfidenceSection />
+      <LocationSection />
       <ContactSection />
 
       <footer className="py-6 text-center text-primary text-sm border-t border-border space-y-2 bg-black">
