@@ -53,12 +53,11 @@ const ContactSection = () => {
 
   const bookingFeatures = [
     "No experience needed",
-    "1:1 Pressure-Tested Coaching • £35/hr",
+    "1:1 Pressure-Tested Coaching • £35/hr (Home Training Available)",
     "Train at your pace",
     "Knife threat awareness & defence principles",
     "First Session Free",
-    "Location Flexibility",
-  ];
+];
 
   return (
     <section id="contact" className="pt-8 pb-12 px-4 bg-[#565A60]">
