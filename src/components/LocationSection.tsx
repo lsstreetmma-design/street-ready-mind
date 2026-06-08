@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
-import mapImage from "@/assets/bromley-map.png.asset.json";
 
 const LocationSection = () => {
+  const embedUrl = "https://maps.google.com/maps?q=ChIJ6dDoDGyq2EcRunLgSdGUvY8&output=embed";
   const mapUrl = "https://maps.app.goo.gl/rTJoR7du1xnW8nET8";
 
   return (
@@ -17,20 +17,19 @@ const LocationSection = () => {
           Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY
         </p>
 
-        <a
-          href={mapUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full rounded-xl overflow-hidden border border-zinc-600/60 mb-6 cursor-pointer"
-          aria-label="Open Bromley United Reformed Church in Google Maps"
-        >
-            <img
-              src={mapImage.url}
-              alt="Map showing Bromley United Reformed Church, 20 Widmore Rd, Bromley BR1 1RY"
-              className="w-full h-auto block"
-              loading="lazy"
-            />
-        </a>
+        <div className="w-full rounded-xl overflow-hidden border border-zinc-600/60 mb-6">
+          <iframe
+            src={embedUrl}
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Map showing Bromley United Reformed Church"
+            className="block w-full"
+          />
+        </div>
 
         <div className="flex justify-center">
           <a
