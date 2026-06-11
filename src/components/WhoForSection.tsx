@@ -4,7 +4,7 @@ const features = [
   "Complete beginners",
   "People who want real-world confidence",
   "Anyone who knows deep down their current training isn't enough",
-  "Those who want to feel in control — not helpless — in unpredictable situations",
+  "Those who want to feel in control,not helpless,in unpredictable situations",
 ];
 
 const WhoForSection = () => {

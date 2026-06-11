@@ -21,7 +21,7 @@ const AboutSection = () => {
 
         <div className="space-y-5 text-slate-100 font-body text-base md:text-lg leading-relaxed">
           <p>
-            Often self-defence classes give a false sense of security. It's clean, controlled, and predictable — but real situations aren't.
+            Often self-defence classes give a false sense of security. It's clean, controlled, and predictable,but real situations aren't.
           </p>
           <p>
             Real violence is sudden, chaotic, and overwhelming. There are no warm-ups. No rules. No second chances.
@@ -42,7 +42,7 @@ const AboutSection = () => {
             I founded LS Street MMA because I saw a gap between what's being taught and what actually happens when violence finds you.
           </p>
           <p>
-            If you've ever been in a physical confrontation, you will have experienced these symptoms:
+            If you've ever been in a physical confrontation,you will have experienced these symptoms:
           </p>
 
           <ul className="space-y-2">
@@ -55,7 +55,7 @@ const AboutSection = () => {
           </ul>
 
           <p className="mt-6">
-            I didn't start training to compete. Referees and rules don't exist in real confrontations — I don't train for points. I wanted to know — without doubt — that I could defend myself if it ever came to it.
+            I didn't start training to compete. Referees and rules don't exist in real confrontations, I don't train for points. I wanted to know, without doubt,that I could defend myself if it ever came to it.
           </p>
           <p>
             Because freezing isn't an option.
