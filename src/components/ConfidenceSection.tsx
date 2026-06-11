@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const building = [
   "The ability to stay calm under pressure",
-  "Real confidence — not false confidence",
+  "Real confidence,not false confidence",
   "Simple, reliable skills that hold up in chaos",
   "Awareness and decision-making in real time",
   "A mindset that doesn't freeze when things go wrong",
