@@ -10,7 +10,8 @@ import { showSentToast } from "@/lib/sent-toast";
 
 const bookingFeatures = [
   "No experience needed",
-  "1:1 Pressure-Tested Coaching • £35/hr (Home Training Available)",
+  "1:1 Pressure-Tested Coaching • £35/hr",
+  "Home Training Available",
   "Train at your pace",
   "Knife threat awareness & defence principles",
   "First Session Free",
