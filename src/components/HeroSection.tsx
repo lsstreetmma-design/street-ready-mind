@@ -133,7 +133,7 @@ const HeroSection = () => {
             </h2>
 
             <p className="text-foreground text-base md:text-lg max-w-xl mx-auto font-body">
-              <span className="text-foreground font-semibold">Practical. Realistic.</span> <span className="text-white font-semibold">Pressure-tested self defence training designed for</span> <span className="text-foreground font-semibold">real-life violence</span> <span className="text-white">— not sport, not fantasy.</span>
+              <span className="text-white font-semibold">Practical, realistic, pressure tested self-defence training designed for real-life violence, not sport, not fantasy.</span>
             </p>
           </div>
 
