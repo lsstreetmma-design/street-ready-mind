@@ -14,13 +14,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Oswald', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Anton', 'Impact', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          soft: "hsl(var(--ink-soft))",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -78,5 +82,7 @@ export default {
       },
     },
   },
+  // Hover styles only apply on mouse/trackpad devices, so they do not stick after a tap on phones
+  future: { hoverOnlyWhenSupported: true },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

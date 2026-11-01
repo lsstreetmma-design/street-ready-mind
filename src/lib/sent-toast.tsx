@@ -8,7 +8,7 @@ export const showSentToast = () => {
         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-500/20">
           <Check className="text-green-400" size={14} strokeWidth={3} />
         </span>
-        <span className="text-sm font-medium tracking-wide">Your message has been sent</span>
+        <span className="text-sm font-medium tracking-wide">Thanks! Lee will be in touch soon.</span>
       </div>
     ),
     { duration: 3500, position: "bottom-center" }

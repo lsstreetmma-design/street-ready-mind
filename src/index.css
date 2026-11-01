@@ -1,43 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* LS Street MMA colours - orange / black / off-white (the 2026 flyer palette) */
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 92%;
+    --background: 40 11% 96%;      /* off-white page */
+    --foreground: 240 6% 10%;      /* near-black text */
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 92%;
+    --ink: 240 7% 6%;              /* black sections */
+    --ink-soft: 240 5% 12%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
 
-    --primary: 27 100% 50%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+
+    --primary: 17 92% 52%;         /* LS orange #F4581C */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 40 8% 90%;
+    --secondary-foreground: 240 6% 10%;
 
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 40 8% 90%;
+    --muted-foreground: 240 4% 34%;
 
-    --accent: 27 100% 50%;
+    --accent: 17 92% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 27 100% 50%;
+    --border: 40 6% 84%;
+    --input: 40 6% 78%;
+    --ring: 17 92% 52%;
 
-    --radius: 0.25rem;
-
-    --font-heading: 'Oswald', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --radius: 0.5rem;
   }
 }
 
@@ -46,29 +47,65 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
+  html {
+    scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+  }
+
+  /* Anchor jumps land below the sticky header */
+  section[id] {
+    scroll-margin-top: 5rem;
   }
 }
 
-@layer utilities {
-  .text-gradient-orange {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(27, 100%, 55%), hsl(35, 100%, 50%));
+@layer components {
+  /* Small label above a heading, sat on a painted orange swipe */
+  .kicker {
+    @apply relative inline-block font-display uppercase text-sm tracking-[0.18em] text-white px-4 py-1.5;
+    isolation: isolate;
+  }
+  .kicker::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: hsl(var(--primary));
+    clip-path: polygon(2% 12%, 100% 0, 97% 88%, 0 100%);
   }
 
-  .glow-orange {
-    box-shadow: 0 0 30px hsl(27 100% 50% / 0.3), 0 0 60px hsl(27 100% 50% / 0.1);
+  /* Brush-stroke underline under a key word */
+  .brush-underline {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M2 14 C 60 6, 140 4, 298 8 L 296 15 C 180 12, 90 14, 4 19 Z' fill='%23F4581C'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0 86%;
+    background-size: 100% 0.2em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
-  .border-grit {
-    border-image: linear-gradient(90deg, transparent, hsl(27 100% 50% / 0.5), transparent) 1;
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-4 font-display uppercase tracking-wider text-white text-lg
+      shadow-[0_10px_24px_-10px_hsl(17_92%_52%/0.8)] transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[hsl(17_92%_46%)]
+      focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-current px-6 py-[0.9rem] font-display uppercase tracking-wider text-lg
+      transition-colors duration-200 hover:bg-white hover:text-ink
+      focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40;
+  }
+
+  /* Ragged "torn paper" bottom edge on dark sections */
+  .torn-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), 91% 100%, 77% calc(100% - 16px), 60% 100%, 44% calc(100% - 20px), 27% 100%, 12% calc(100% - 12px), 0 100%);
   }
 }
