@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, CalendarDays, Clock, Dumbbell, MapPin, Shield, Users } from "lucide-react";
+import { ArrowRight, Brain, CalendarDays, Clock, Dumbbell, MapPin, Shield, UserRound, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
 import hero from "@/assets/hero.webp";
@@ -59,6 +59,9 @@ const Index = () => (
           skills that can make a real difference.
         </p>
         <p className="mt-3 font-semibold text-white">No experience needed. All fitness levels welcome.</p>
+        <p className="mt-2 text-white/85">
+          {SITE.oneToOne} <span className="text-primary">·</span> {SITE.homeTraining}
+        </p>
 
         <div className="mt-9 flex flex-col sm:flex-row gap-4">
           <a href="#book" className="btn-primary">
@@ -222,6 +225,14 @@ const Index = () => (
             <div>
               <p className="font-display uppercase text-xl">Time</p>
               <p className="text-muted-foreground">{SITE.trainingTime}</p>
+            </div>
+          </li>
+          <li className="flex gap-4 rounded-lg border-2 border-primary/40 bg-card p-5">
+            <UserRound className="mt-1 text-primary shrink-0" size={26} />
+            <div>
+              <p className="font-display uppercase text-xl">1:1 Coaching</p>
+              <p className="text-muted-foreground">{SITE.oneToOne}</p>
+              <p className="mt-1 font-semibold text-foreground">{SITE.homeTraining}</p>
             </div>
           </li>
         </ul>

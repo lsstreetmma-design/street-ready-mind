@@ -39,6 +39,8 @@ const SiteFooter = () => (
         <h2 className="text-white text-xl mb-4">Training</h2>
         <p className="text-sm">{SITE.trainingDays}</p>
         <p className="text-sm">{SITE.trainingTime}</p>
+        <p className="mt-3 text-sm">{SITE.oneToOne}</p>
+        <p className="text-sm">{SITE.homeTraining}</p>
         <nav className="mt-3 flex flex-wrap gap-x-5 text-sm" aria-label="Footer">
           <Link to="/" className="inline-flex min-h-11 min-w-11 items-center hover:text-white underline-offset-4 hover:underline">Home</Link>
           <Link to="/coach" className="inline-flex min-h-11 min-w-11 items-center hover:text-white underline-offset-4 hover:underline">Head Coach</Link>

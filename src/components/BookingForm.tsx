@@ -67,6 +67,8 @@ const BookingForm = () => {
           <option>Wednesday</option>
           <option>Thursday</option>
           <option>Either</option>
+          <option value="1:1 coaching">1:1 coaching (£35/hr)</option>
+          <option value="1:1 home training">1:1 home training (£35/hr)</option>
         </select>
       </label>
 
