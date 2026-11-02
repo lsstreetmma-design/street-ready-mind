@@ -63,10 +63,11 @@ const BookingForm = () => {
 
       <label className="block">
         <span className="mb-1.5 block text-sm font-semibold">Which session suits you?</span>
-        <select name="preferred_day" className={fieldClass} defaultValue="Wednesday">
+        <select name="preferred_day" className={fieldClass} defaultValue="Tuesday">
+          <option>Tuesday</option>
           <option>Wednesday</option>
           <option>Thursday</option>
-          <option>Either</option>
+          <option value="Any">Any day</option>
           <option value="1:1 coaching">1:1 coaching (£35/hr)</option>
           <option value="1:1 home training">1:1 home training (£35/hr)</option>
         </select>

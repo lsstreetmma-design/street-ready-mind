@@ -33,8 +33,8 @@ const gains = [
 ];
 
 const quickFacts = [
-  { icon: CalendarDays, label: "Wed & Thu" },
-  { icon: Clock, label: "7pm – 8pm" },
+  { icon: CalendarDays, label: "Tue, Wed & Thu" },
+  { icon: Clock, label: "Open until 8pm" },
   { icon: MapPin, label: SITE.area },
   { icon: Shield, label: "First session free" },
 ];
@@ -223,8 +223,15 @@ const Index = () => (
           <li className="flex gap-4 rounded-lg border bg-card p-5">
             <Clock className="mt-1 text-primary shrink-0" size={26} />
             <div>
-              <p className="font-display uppercase text-xl">Time</p>
-              <p className="text-muted-foreground">{SITE.trainingTime}</p>
+              <p className="font-display uppercase text-xl">Times</p>
+              <dl className="text-muted-foreground">
+                {SITE.schedule.map(({ day, time }) => (
+                  <div key={day} className="flex flex-wrap gap-x-2">
+                    <dt className="font-semibold text-foreground">{day}</dt>
+                    <dd>{time}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </li>
           <li className="flex gap-4 rounded-lg border-2 border-primary/40 bg-card p-5">

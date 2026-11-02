@@ -37,8 +37,11 @@ const SiteFooter = () => (
 
       <div>
         <h2 className="text-white text-xl mb-4">Training</h2>
-        <p className="text-sm">{SITE.trainingDays}</p>
-        <p className="text-sm">{SITE.trainingTime}</p>
+        {SITE.schedule.map(({ day, time }) => (
+          <p key={day} className="text-sm">
+            <span className="text-white">{day}</span> {time}
+          </p>
+        ))}
         <p className="mt-3 text-sm">{SITE.oneToOne}</p>
         <p className="text-sm">{SITE.homeTraining}</p>
         <nav className="mt-3 flex flex-wrap gap-x-5 text-sm" aria-label="Footer">
