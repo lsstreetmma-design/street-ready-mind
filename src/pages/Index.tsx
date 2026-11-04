@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, CalendarDays, Clock, Dumbbell, MapPin, Shield, UserRound, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
-import hero from "@/assets/hero.webp";
 import badge from "@/assets/logo-badge.webp";
 import lee from "@/assets/lee-coach.webp";
 import { SITE } from "@/lib/site";
@@ -44,42 +43,54 @@ const Index = () => (
     title="LS Street MMA | MMA Self-Defence Classes in Bromley | First Session Free"
     description="Practical MMA-based self-defence training in Bromley. Build confidence, improve your fitness and learn skills that make a real difference. No experience needed. First session free."
   >
-    {/* HERO */}
-    <section className="relative isolate overflow-hidden bg-ink text-white torn-bottom">
-      <img src={hero} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-45" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
+    {/* HERO - light grey with Lee's picture (Lee asked 11-04 to drop the hooded-figure photo for something more welcoming) */}
+    <section className="bg-secondary torn-bottom">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-20 md:pt-20 md:pb-28 lg:grid-cols-[1.3fr_1fr]">
+        <div>
+          <p className="kicker">LS Street MMA · {SITE.area}</p>
+          <h1 className="mt-6 max-w-3xl text-5xl sm:text-6xl md:text-7xl">
+            <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
+          </h1>
+          <p className="mt-6 max-w-xl text-lg md:text-xl text-foreground/80 leading-relaxed">
+            Practical MMA-based self-defence training designed to build your confidence, improve your fitness and teach you
+            skills that can make a real difference.
+          </p>
+          <p className="mt-3 font-semibold">No experience needed. All fitness levels welcome.</p>
+          <p className="mt-2 text-foreground/80">
+            {SITE.oneToOne} <span className="text-primary">·</span> {SITE.homeTraining}
+          </p>
 
-      <div className="mx-auto max-w-6xl px-4 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="kicker">LS Street MMA · {SITE.area}</p>
-        <h1 className="mt-6 max-w-3xl text-5xl sm:text-6xl md:text-7xl">
-          <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
-        </h1>
-        <p className="mt-6 max-w-xl text-lg md:text-xl text-white/90 leading-relaxed">
-          Practical MMA-based self-defence training designed to build your confidence, improve your fitness and teach you
-          skills that can make a real difference.
-        </p>
-        <p className="mt-3 font-semibold text-white">No experience needed. All fitness levels welcome.</p>
-        <p className="mt-2 text-white/85">
-          {SITE.oneToOne} <span className="text-primary">·</span> {SITE.homeTraining}
-        </p>
+          <div className="mt-9 flex flex-col sm:flex-row gap-4">
+            <a href="#book" className="btn-primary">
+              Try Your First Session Free <ArrowRight size={20} />
+            </a>
+            <a href={SITE.phoneHref} className="btn-ghost text-ink hover:bg-ink hover:text-white">
+              Call {SITE.phoneDisplay}
+            </a>
+          </div>
 
-        <div className="mt-9 flex flex-col sm:flex-row gap-4">
-          <a href="#book" className="btn-primary">
-            Try Your First Session Free <ArrowRight size={20} />
-          </a>
-          <a href={SITE.phoneHref} className="btn-ghost text-white">
-            Call {SITE.phoneDisplay}
-          </a>
+          {/* 2x2 on phones and wide screens (the text column is narrower beside Lee's picture), one row on tablets */}
+          <ul className="mt-12 grid max-w-2xl grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-px overflow-hidden rounded-md border bg-border text-sm">
+            {quickFacts.map(({ icon: Icon, label }) => (
+              <li key={label} className="flex items-center gap-2 bg-card px-4 py-3">
+                <Icon size={18} className="text-primary shrink-0" />
+                <span className="font-semibold">{label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <ul className="mt-12 grid max-w-2xl grid-cols-2 sm:grid-cols-4 gap-px overflow-hidden rounded-md bg-white/15 text-sm">
-          {quickFacts.map(({ icon: Icon, label }) => (
-            <li key={label} className="flex items-center gap-2 bg-ink/80 px-4 py-3">
-              <Icon size={18} className="text-primary shrink-0" />
-              <span className="font-semibold">{label}</span>
-            </li>
-          ))}
-        </ul>
+        {/* Below the text on phones/tablets, beside it on wide screens */}
+        <div className="relative mx-auto w-full max-w-[16rem] sm:max-w-sm lg:max-w-none">
+          <div className="absolute -inset-3 rotate-3 rounded-lg bg-primary" aria-hidden="true" />
+          <img
+            src={lee}
+            alt="Lee, head coach at LS Street MMA"
+            width={800}
+            height={1200}
+            className="relative aspect-[4/5] w-full rounded-lg object-cover object-top shadow-xl"
+          />
+        </div>
       </div>
     </section>
 
@@ -121,15 +132,16 @@ const Index = () => (
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {gains.map(({ icon: Icon, title, text }) => (
+            // Orange boxes at Lee's request (11-04); body text is near-black because white on this orange is hard to read
             <article
               key={title}
-              className="group rounded-lg border border-white/10 bg-ink-soft p-7 transition-colors hover:border-primary/60"
+              className="rounded-lg bg-primary p-7 shadow-lg transition-transform duration-200 hover:-translate-y-1"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-md bg-primary/15 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+              <span className="flex h-14 w-14 items-center justify-center rounded-md bg-ink text-primary">
                 <Icon size={28} />
               </span>
-              <h3 className="mt-6 text-2xl">{title}</h3>
-              <p className="mt-3 leading-relaxed text-white/75">{text}</p>
+              <h3 className="mt-6 text-2xl text-white">{title}</h3>
+              <p className="mt-3 font-medium leading-relaxed text-ink">{text}</p>
             </article>
           ))}
         </div>
