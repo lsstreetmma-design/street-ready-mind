@@ -8,13 +8,14 @@ export const SITE = {
   phoneHref: "tel:+447900770404",
   email: "LS-STREET-MMA@hotmail.com",
 
-  // Training times - matched to the Google Business hours (11-02, David's request)
-  trainingDays: "Tuesday, Wednesday & Thursday",
-  schedule: [
-    { day: "Tuesday", time: "3:00 pm – 8:00 pm" },
-    { day: "Wednesday", time: "4:00 pm – 8:00 pm" },
-    { day: "Thursday", time: "3:00 pm – 8:00 pm" },
-  ],
+  // Hours, from Lee 11-05: group classes are Wed & Thu 7-8 pm,
+  // 1:1 coaching is Tue, Wed & Thu 3-8 pm. The "Short" versions fit the small info boxes at the top.
+  classDays: "Wednesday & Thursday",
+  classTime: "7:00 pm – 8:00 pm",
+  classShort: "Wed & Thu · 7pm – 8pm",
+  oneToOneDays: "Tuesday, Wednesday & Thursday",
+  oneToOneTime: "3:00 pm – 8:00 pm",
+  oneToOneShort: "Tue, Wed & Thu · 3pm – 8pm",
   area: "Bromley",
 
   // Private sessions (Lee's own wording from the old site, put back 11-01 at David's request)

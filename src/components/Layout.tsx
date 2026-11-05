@@ -46,8 +46,8 @@ const Layout = ({ title, description, children }: LayoutProps) => {
 
       {/* Phone-only bottom bar so booking is always one tap away
           (hidden on short sideways screens, where the header shows a Free Session button instead) */}
-      <div className="md:hidden [@media(max-height:500px)]:hidden fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-white/10 bg-ink/95 backdrop-blur p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <a href={SITE.phoneHref} className="btn-ghost !py-3 !px-4 text-white" aria-label={`Call ${SITE.phoneDisplay}`}>
+      <div className="md:hidden [@media(max-height:500px)]:hidden fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-border bg-white/95 backdrop-blur p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+        <a href={SITE.phoneHref} className="btn-ghost !py-3 !px-4 text-ink hover:bg-secondary" aria-label={`Call ${SITE.phoneDisplay}`}>
           <Phone size={20} />
         </a>
         <Link to="/#book" className="btn-primary !py-3 flex-1">

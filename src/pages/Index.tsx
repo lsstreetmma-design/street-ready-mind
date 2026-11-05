@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, CalendarDays, Clock, Dumbbell, MapPin, Shield, UserRound, Users } from "lucide-react";
+import { ArrowRight, Brain, CalendarDays, Dumbbell, MapPin, Shield, UserRound, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
-import badge from "@/assets/logo-badge.webp";
 import lee from "@/assets/lee-coach.webp";
 import { SITE } from "@/lib/site";
 
@@ -31,100 +30,81 @@ const gains = [
   },
 ];
 
-const quickFacts = [
-  { icon: CalendarDays, label: "Tue, Wed & Thu" },
-  { icon: Clock, label: "Open until 8pm" },
-  { icon: MapPin, label: SITE.area },
-  { icon: Shield, label: "First session free" },
-];
-
 const Index = () => (
   <Layout
     title="LS Street MMA | MMA Self-Defence Classes in Bromley | First Session Free"
     description="Practical MMA-based self-defence training in Bromley. Build confidence, improve your fitness and learn skills that make a real difference. No experience needed. First session free."
   >
-    {/* HERO - light grey with Lee's picture (Lee asked 11-04 to drop the hooded-figure photo for something more welcoming) */}
+    {/* HERO - light grey, no picture (Lee 11-05: Lee's picture is already further down the page) */}
     <section className="bg-secondary torn-bottom">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-20 md:pt-20 md:pb-28 lg:grid-cols-[1.3fr_1fr]">
-        <div>
-          <p className="kicker">LS Street MMA · {SITE.area}</p>
-          <h1 className="mt-6 max-w-3xl text-5xl sm:text-6xl md:text-7xl">
-            <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
-          </h1>
-          <p className="mt-6 max-w-xl text-lg md:text-xl text-foreground/80 leading-relaxed">
-            Practical MMA-based self-defence training designed to build your confidence, improve your fitness and teach you
-            skills that can make a real difference.
-          </p>
-          <p className="mt-3 font-semibold">No experience needed. All fitness levels welcome.</p>
-          <p className="mt-2 text-foreground/80">
-            {SITE.oneToOne} <span className="text-primary">·</span> {SITE.homeTraining}
-          </p>
+      <div className="mx-auto max-w-6xl px-4 pt-14 pb-20 md:pt-20 md:pb-28">
+        <p className="kicker">LS Street MMA · {SITE.area}</p>
+        <h1 className="mt-6 max-w-3xl text-5xl sm:text-6xl md:text-7xl">
+          <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
+        </h1>
+        <p className="mt-6 max-w-xl text-lg md:text-xl text-foreground/80 leading-relaxed">
+          Practical MMA-based self-defence training designed to build your confidence, improve your fitness and teach you
+          skills that can make a real difference.
+        </p>
+        <p className="mt-3 font-semibold">No experience needed. All fitness levels welcome.</p>
 
-          <div className="mt-9 flex flex-col sm:flex-row gap-4">
-            <a href="#book" className="btn-primary">
-              Try Your First Session Free <ArrowRight size={20} />
-            </a>
-            <a href={SITE.phoneHref} className="btn-ghost text-ink hover:bg-ink hover:text-white">
-              Call {SITE.phoneDisplay}
-            </a>
-          </div>
-
-          {/* 2x2 on phones and wide screens (the text column is narrower beside Lee's picture), one row on tablets */}
-          <ul className="mt-12 grid max-w-2xl grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-px overflow-hidden rounded-md border bg-border text-sm">
-            {quickFacts.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-2 bg-card px-4 py-3">
-                <Icon size={18} className="text-primary shrink-0" />
-                <span className="font-semibold">{label}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="mt-9 flex flex-col sm:flex-row gap-4">
+          <a href="#book" className="btn-primary">
+            Try Your First Session Free <ArrowRight size={20} />
+          </a>
+          <a href={SITE.phoneHref} className="btn-ghost text-ink hover:bg-white">
+            Call {SITE.phoneDisplay}
+          </a>
         </div>
 
-        {/* Below the text on phones/tablets, beside it on wide screens */}
-        <div className="relative mx-auto w-full max-w-[16rem] sm:max-w-sm lg:max-w-none">
-          <div className="absolute -inset-3 rotate-3 rounded-lg bg-primary" aria-hidden="true" />
-          <img
-            src={lee}
-            alt="Lee, head coach at LS Street MMA"
-            width={800}
-            height={1200}
-            className="relative aspect-[4/5] w-full rounded-lg object-cover object-top shadow-xl"
-          />
-        </div>
+        {/* Key info boxes. The 1:1 coaching sits here with the class info (Lee 11-05).
+            Phones: the two time boxes full width, Bromley + free session side by side. Tablet and up: 2 x 2. */}
+        <ul className="mt-12 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-md border bg-border text-sm">
+          <li className="col-span-2 sm:col-span-1 flex gap-3 bg-card px-4 py-3">
+            <CalendarDays size={18} className="mt-0.5 text-primary shrink-0" />
+            <div>
+              <p className="font-semibold">Classes</p>
+              <p className="text-muted-foreground">{SITE.classShort}</p>
+            </div>
+          </li>
+          <li className="col-span-2 sm:col-span-1 flex gap-3 bg-card px-4 py-3">
+            <UserRound size={18} className="mt-0.5 text-primary shrink-0" />
+            <div>
+              <p className="font-semibold">{SITE.oneToOne}</p>
+              <p className="text-muted-foreground">{SITE.oneToOneShort}</p>
+              <p className="text-muted-foreground">{SITE.homeTraining}</p>
+            </div>
+          </li>
+          <li className="flex items-center gap-3 bg-card px-4 py-3">
+            <MapPin size={18} className="text-primary shrink-0" />
+            <span className="font-semibold">{SITE.area}</span>
+          </li>
+          <li className="flex items-center gap-3 bg-card px-4 py-3">
+            <Shield size={18} className="text-primary shrink-0" />
+            <span className="font-semibold">First session free</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    {/* MMA FOR SELF-DEFENCE */}
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 md:grid-cols-[1.3fr_1fr] md:py-28">
-      <div>
-        <p className="kicker">What we do</p>
-        <h2 className="mt-5 text-4xl md:text-5xl">MMA for Self-Defence</h2>
-        <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
-          <p>At LS Street MMA, we focus on practical self-defence using MMA principles.</p>
-          <p>
-            Our training helps you develop the skills, confidence and mindset to respond effectively under pressure.
-          </p>
-          <p>
-            Whether you're looking to learn self-defence, improve your fitness or simply try something new, you'll find a
-            welcoming and supportive environment.
-          </p>
-        </div>
-      </div>
-      <div className="relative mx-auto w-full max-w-sm">
-        <div className="absolute -inset-3 -rotate-3 rounded-lg bg-primary" aria-hidden="true" />
-        <img
-          src={badge}
-          alt="LS Street MMA Self Defence badge"
-          width={512}
-          height={512}
-          loading="lazy"
-          className="relative w-full rounded-lg"
-        />
+    {/* MMA FOR SELF-DEFENCE (badge picture removed at Lee's request 11-05) */}
+    <section className="mx-auto max-w-4xl px-4 py-20 md:py-28">
+      <p className="kicker">What we do</p>
+      <h2 className="mt-5 text-4xl md:text-5xl">MMA for Self-Defence</h2>
+      <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
+        <p>At LS Street MMA, we focus on practical self-defence using MMA principles.</p>
+        <p>
+          Our training helps you develop the skills, confidence and mindset to respond effectively under pressure.
+        </p>
+        <p>
+          Whether you're looking to learn self-defence, improve your fitness or simply try something new, you'll find a
+          welcoming and supportive environment.
+        </p>
       </div>
     </section>
 
-    {/* WHAT YOU'LL GAIN */}
-    <section className="bg-ink text-white">
+    {/* WHAT YOU'LL GAIN (light grey, no black backgrounds - Lee 11-05) */}
+    <section className="bg-secondary">
       <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div className="text-center">
           <p className="kicker">Why train with us</p>
@@ -137,7 +117,7 @@ const Index = () => (
               key={title}
               className="rounded-lg bg-primary p-7 shadow-lg transition-transform duration-200 hover:-translate-y-1"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-md bg-ink text-primary">
+              <span className="flex h-14 w-14 items-center justify-center rounded-md bg-white text-primary">
                 <Icon size={28} />
               </span>
               <h3 className="mt-6 text-2xl text-white">{title}</h3>
@@ -169,7 +149,7 @@ const Index = () => (
 
       <Link
         to="/coach"
-        className="group self-start overflow-hidden rounded-lg bg-ink text-white shadow-xl transition-transform hover:-translate-y-1"
+        className="group self-start overflow-hidden rounded-lg border bg-card shadow-xl transition-transform hover:-translate-y-1"
       >
         <img
           src={lee}
@@ -191,12 +171,12 @@ const Index = () => (
 
     {/* FIRST SESSION FREE */}
     <section className="relative overflow-hidden bg-primary text-white">
-      <div className="absolute inset-y-0 -left-10 w-1/3 -skew-x-12 bg-ink/10" aria-hidden="true" />
+      <div className="absolute inset-y-0 -left-10 w-1/3 -skew-x-12 bg-white/10" aria-hidden="true" />
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center lg:flex-row lg:justify-between lg:text-left">
         <h2 className="text-5xl md:text-6xl">First Session Free</h2>
         <a
           href="#book"
-          className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-ink px-7 py-4 font-display uppercase tracking-wider text-lg text-white transition-transform hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-7 py-4 font-display uppercase tracking-wider text-lg text-ink transition-transform hover:-translate-y-0.5"
         >
           Book Your Free Session <ArrowRight size={20} />
         </a>
@@ -228,22 +208,9 @@ const Index = () => (
           <li className="flex gap-4 rounded-lg border bg-card p-5">
             <CalendarDays className="mt-1 text-primary shrink-0" size={26} />
             <div>
-              <p className="font-display uppercase text-xl">Training Days</p>
-              <p className="text-muted-foreground">{SITE.trainingDays}</p>
-            </div>
-          </li>
-          <li className="flex gap-4 rounded-lg border bg-card p-5">
-            <Clock className="mt-1 text-primary shrink-0" size={26} />
-            <div>
-              <p className="font-display uppercase text-xl">Times</p>
-              <dl className="text-muted-foreground">
-                {SITE.schedule.map(({ day, time }) => (
-                  <div key={day} className="flex flex-wrap gap-x-2">
-                    <dt className="font-semibold text-foreground">{day}</dt>
-                    <dd>{time}</dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="font-display uppercase text-xl">Classes</p>
+              <p className="text-muted-foreground">{SITE.classDays}</p>
+              <p className="text-muted-foreground">{SITE.classTime}</p>
             </div>
           </li>
           <li className="flex gap-4 rounded-lg border-2 border-primary/40 bg-card p-5">
@@ -251,6 +218,8 @@ const Index = () => (
             <div>
               <p className="font-display uppercase text-xl">1:1 Coaching</p>
               <p className="text-muted-foreground">{SITE.oneToOne}</p>
+              <p className="text-muted-foreground">{SITE.oneToOneDays}</p>
+              <p className="text-muted-foreground">{SITE.oneToOneTime}</p>
               <p className="mt-1 font-semibold text-foreground">{SITE.homeTraining}</p>
             </div>
           </li>

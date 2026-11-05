@@ -10,8 +10,7 @@
     --background: 40 11% 96%;      /* off-white page */
     --foreground: 240 6% 10%;      /* near-black text */
 
-    --ink: 240 7% 6%;              /* black sections */
-    --ink-soft: 240 5% 12%;
+    --ink: 240 7% 6%;              /* near-black text and outlines */
 
     --card: 0 0% 100%;
     --card-foreground: 240 6% 10%;
