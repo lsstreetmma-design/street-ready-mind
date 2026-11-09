@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, CalendarDays, Dumbbell, MapPin, Shield, UserRound, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
-import lee from "@/assets/lee-coach.webp";
 import { SITE } from "@/lib/site";
 
 // All wording on this page comes from Lee's "LS STREET MMA" Word document (Nov 2026).
@@ -151,14 +150,7 @@ const Index = () => (
         to="/coach"
         className="group self-start overflow-hidden rounded-lg border bg-card shadow-xl transition-transform hover:-translate-y-1"
       >
-        <img
-          src={lee}
-          alt="Lee, head coach at LS Street MMA"
-          width={800}
-          height={1200}
-          loading="lazy"
-          className="aspect-[4/3] w-full object-cover object-top"
-        />
+        {/* Picture removed at Lee's request (11-09) - just the Head Coach / Hi I'm Lee link */}
         <div className="flex items-center justify-between gap-4 p-6">
           <div>
             <p className="text-sm uppercase tracking-widest text-primary font-semibold">Head Coach</p>
@@ -169,12 +161,18 @@ const Index = () => (
       </Link>
     </section>
 
-    {/* FIRST SESSION FREE - heading only; its "Book Your Free Session" button was removed at Lee's
-        request (11-09) because the booking form starts right below it */}
+    {/* FIRST SESSION FREE - the button is hidden on phones (Lee 11-09): the bottom bar already
+        shows "Book Free Session" there. Tablets and computers have no bottom bar, so they keep it. */}
     <section className="relative overflow-hidden bg-primary text-white">
       <div className="absolute inset-y-0 -left-10 w-1/3 -skew-x-12 bg-white/10" aria-hidden="true" />
-      <div className="relative mx-auto max-w-6xl px-4 py-14 text-center">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center lg:flex-row lg:justify-between lg:text-left">
         <h2 className="text-5xl md:text-6xl">First Session Free</h2>
+        <a
+          href="#book"
+          className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-7 py-4 font-display uppercase tracking-wider text-lg text-ink transition-transform hover:-translate-y-0.5"
+        >
+          Book Your Free Session <ArrowRight size={20} />
+        </a>
       </div>
     </section>
 

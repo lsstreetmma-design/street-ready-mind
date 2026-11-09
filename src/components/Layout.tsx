@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Phone } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { SITE } from "@/lib/site";
 
 type LayoutProps = {
   title: string;
@@ -41,7 +43,18 @@ const Layout = ({ title, description, children }: LayoutProps) => {
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />
-      {/* The phone-only fixed "Book Free Session" bar was removed at Lee's request (11-09) */}
+
+      {/* Phone-only bottom bar so booking is always one tap away
+          (hidden on short sideways screens, where the header shows a Free Session button instead).
+          Because this is always on screen, the orange band's own button is hidden on phones. */}
+      <div className="md:hidden [@media(max-height:500px)]:hidden fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-border bg-white/95 backdrop-blur p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+        <a href={SITE.phoneHref} className="btn-ghost !py-3 !px-4 text-ink hover:bg-secondary" aria-label={`Call ${SITE.phoneDisplay}`}>
+          <Phone size={20} />
+        </a>
+        <Link to="/#book" className="btn-primary !py-3 flex-1">
+          Book Free Session
+        </Link>
+      </div>
     </div>
   );
 };
