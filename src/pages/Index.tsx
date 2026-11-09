@@ -161,15 +161,15 @@ const Index = () => (
       </Link>
     </section>
 
-    {/* FIRST SESSION FREE - the button is hidden on phones (Lee 11-09): the bottom bar already
-        shows "Book Free Session" there. Tablets and computers have no bottom bar, so they keep it. */}
-    <section className="relative overflow-hidden bg-primary text-white">
+    {/* FIRST SESSION FREE - the whole band is hidden on phones (David/Lee 11-09): the bottom bar
+        already shows "Book Free Session" there. Tablets and computers have no bottom bar, so they keep it. */}
+    <section className="hidden md:block relative overflow-hidden bg-primary text-white">
       <div className="absolute inset-y-0 -left-10 w-1/3 -skew-x-12 bg-white/10" aria-hidden="true" />
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center lg:flex-row lg:justify-between lg:text-left">
         <h2 className="text-5xl md:text-6xl">First Session Free</h2>
         <a
           href="#book"
-          className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-7 py-4 font-display uppercase tracking-wider text-lg text-ink transition-transform hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-white px-7 py-4 font-display uppercase tracking-wider text-lg text-ink transition-transform hover:-translate-y-0.5"
         >
           Book Your Free Session <ArrowRight size={20} />
         </a>
