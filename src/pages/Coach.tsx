@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
+import lee from "@/assets/lee-coach.webp";
 
 // All wording on this page comes from Lee's "LS STREET MMA" Word document (Nov 2026).
 
@@ -8,9 +9,11 @@ const Coach = () => (
     title="Head Coach Lee | LS Street MMA Self-Defence, Bromley"
     description="Meet Lee, head coach at LS Street MMA in Bromley. A friendly, supportive place to learn practical MMA-based self-defence at your own pace. First session free."
   >
-    {/* HI I'M LEE - text only; his picture was removed at Lee's request (11-09), it's already on the home page */}
+    {/* HI I'M LEE - text + Lee's picture. Picture put back 11-09 (David): this page keeps it;
+        the home page "Hi I'm Lee" card stays text only. Picture sits beside the text on tablets and
+        computers, below it on phones. */}
     <section className="bg-secondary torn-bottom">
-      <div className="mx-auto max-w-4xl px-4 pt-14 pb-24 md:pt-20 md:pb-32">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-24 md:grid-cols-[1.2fr_1fr] md:pt-20 md:pb-32">
         <div>
           <p className="kicker">Head Coach</p>
           <h1 className="mt-6 text-6xl md:text-7xl">
@@ -31,6 +34,17 @@ const Coach = () => (
               willing to give it a go.
             </p>
           </div>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-[16rem] sm:max-w-sm">
+          <div className="absolute -inset-3 rotate-3 rounded-lg bg-primary" aria-hidden="true" />
+          <img
+            src={lee}
+            alt="Lee, head coach at LS Street MMA, in his LS Street MMA hoodie"
+            width={800}
+            height={1200}
+            className="relative w-full rounded-lg"
+          />
         </div>
       </div>
     </section>
