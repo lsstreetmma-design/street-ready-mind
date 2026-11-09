@@ -12,7 +12,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ title, description, children }: LayoutProps) => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
 
   // Per-page title + description (the static HTML for each page also has these, see scripts/postbuild.mjs)
   useEffect(() => {
@@ -22,7 +22,9 @@ const Layout = ({ title, description, children }: LayoutProps) => {
 
   // Go to #book etc. (jump straight there from the other page, glide within the same page),
   // otherwise start at the top
-  // Each page has its own Layout, so the first run after it appears means "just arrived"
+  // Each page has its own Layout, so the first run after it appears means "just arrived".
+  // `key` is new on every tap, so "Book Free Session" still scrolls when the address already
+  // ends in #book (e.g. tap, scroll back up, tap again) - fixed 11-09, it used to do nothing.
   const arrived = useRef(false);
   useEffect(() => {
     const samePage = arrived.current;
@@ -35,7 +37,7 @@ const Layout = ({ title, description, children }: LayoutProps) => {
       }
     }
     window.scrollTo({ top: 0, behavior: "instant" });
-  }, [pathname, hash]);
+  }, [pathname, hash, key]);
 
   return (
     // overflow-x-clip stops the tilted orange photo frames causing sideways scroll on phones
