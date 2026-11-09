@@ -3,9 +3,9 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/logo-wordmark-dark.webp";
 import { SITE } from "@/lib/site";
 
-// Light grey footer (Lee 11-05: no black backgrounds)
+// Grey footer, a shade darker than the page's light grey (Lee 11-05: no black; 11-09: "a little darker")
 const SiteFooter = () => (
-  <footer className="border-t border-border bg-secondary text-foreground/80 pb-24 md:pb-0 [@media(max-height:500px)]:pb-0">
+  <footer className="border-t border-black/10 bg-[hsl(40_6%_83%)] text-foreground/80">
     <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-3">
       <div>
         <img src={logo} alt="LS Street MMA Self Defence" width={960} height={320} loading="lazy" className="h-16 w-auto" />
@@ -50,7 +50,7 @@ const SiteFooter = () => (
         </nav>
       </div>
     </div>
-    <p className="border-t border-border py-5 text-center text-xs text-muted-foreground">
+    <p className="border-t border-black/10 py-5 text-center text-xs text-foreground/70">
       © {new Date().getFullYear()} LS Street MMA. All rights reserved.
     </p>
   </footer>
