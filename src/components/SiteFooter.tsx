@@ -10,7 +10,7 @@ const SiteFooter = () => (
       <div>
         <img src={logo} alt="LS Street MMA Self Defence" width={960} height={320} loading="lazy" className="h-16 w-auto" />
         <p className="mt-4 text-sm leading-relaxed">
-          Practical MMA-based self-defence training in {SITE.area}. No experience needed. All fitness levels welcome.
+          Practical MMA based self-defence training in {SITE.area}. No experience needed. All fitness levels welcome.
         </p>
       </div>
 
@@ -46,7 +46,7 @@ const SiteFooter = () => (
         <nav className="mt-3 flex flex-wrap gap-x-5 text-sm" aria-label="Footer">
           <Link to="/" className="inline-flex min-h-11 min-w-11 items-center hover:text-primary underline-offset-4 hover:underline">Home</Link>
           <Link to="/coach" className="inline-flex min-h-11 min-w-11 items-center hover:text-primary underline-offset-4 hover:underline">Head Coach</Link>
-          <Link to="/#book" className="inline-flex min-h-11 items-center font-semibold text-primary hover:underline underline-offset-4">Book free session</Link>
+          <Link to="/#book" className="inline-flex min-h-11 items-center font-semibold text-primary hover:underline underline-offset-4">Launch offer</Link>
         </nav>
       </div>
     </div>

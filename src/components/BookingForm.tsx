@@ -16,7 +16,7 @@ const BookingForm = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
     data.append("access_key", SITE.web3formsKey);
-    data.append("subject", `Free session booking - ${data.get("name")}`);
+    data.append("subject", `Launch offer enquiry - ${data.get("name")}`);
     data.append("from_name", "LS Street MMA website");
 
     setSending(true);
@@ -81,14 +81,9 @@ const BookingForm = () => {
       </label>
 
       <button type="submit" disabled={sending} className="btn-primary w-full disabled:opacity-60">
-        {sending ? "Sending..." : "Book My Free Session"}
+        {sending ? "Sending..." : "Send"}
       </button>
-      <p className="text-center text-sm text-muted-foreground">
-        Prefer to talk? Call or text{" "}
-        <a href={SITE.phoneHref} className="inline-block py-3 font-semibold text-foreground underline underline-offset-2">
-          {SITE.phoneDisplay}
-        </a>
-      </p>
+      {/* "Prefer to talk? Call or text ..." line removed at Lee's request (11-15); the number is in the footer */}
     </form>
   );
 };

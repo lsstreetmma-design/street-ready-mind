@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, CalendarDays, Dumbbell, MapPin, Shield, UserRound, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
+import lee from "@/assets/lee-coach.webp";
 import { SITE } from "@/lib/site";
 
 // All wording on this page comes from Lee's "LS STREET MMA" Word document (Nov 2026).
@@ -31,8 +32,8 @@ const gains = [
 
 const Index = () => (
   <Layout
-    title="LS Street MMA | MMA Self-Defence Classes in Bromley | First Session Free"
-    description="Practical MMA-based self-defence training in Bromley. Build confidence, improve your fitness and learn skills that make a real difference. No experience needed. First session free."
+    title="LS Street MMA | MMA Self-Defence Classes in Bromley | First Two Sessions Free"
+    description="Practical MMA based self-defence training in Bromley. Build confidence, improve your fitness and learn skills that make a real difference. No experience needed. Launch offer: first two sessions free."
   >
     {/* HERO - light grey, no picture (Lee 11-05: Lee's picture is already further down the page) */}
     <section className="bg-secondary torn-bottom">
@@ -42,22 +43,20 @@ const Index = () => (
           <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
         </h1>
         <p className="mt-6 max-w-xl text-lg md:text-xl text-foreground/80 leading-relaxed">
-          Practical MMA-based self-defence training designed to build your confidence, improve your fitness and teach you
+          Practical MMA based self-defence training designed to build your confidence, improve your fitness and teach you
           skills that can make a real difference.
         </p>
         <p className="mt-3 font-semibold">No experience needed. All fitness levels welcome.</p>
 
-        <div className="mt-9 flex flex-col sm:flex-row gap-4">
-          <a href="#book" className="btn-primary">
-            Try Your First Session Free <ArrowRight size={20} />
-          </a>
-          <a href={SITE.phoneHref} className="btn-ghost text-ink hover:bg-white">
-            Call {SITE.phoneDisplay}
+        {/* Launch offer button (Lee 11-15); the "Call 07900 770404" button next to it was removed */}
+        <div className="mt-9 flex">
+          <a href="#book" className="btn-primary text-center">
+            Launch Offer: First Two Sessions Free <ArrowRight size={20} className="shrink-0" />
           </a>
         </div>
 
         {/* Key info boxes. The 1:1 coaching sits here with the class info (Lee 11-05).
-            Phones: the two time boxes full width, Bromley + free session side by side. Tablet and up: 2 x 2. */}
+            Phones: the two time boxes full width, Bromley + launch offer side by side. Tablet and up: 2 x 2. */}
         <ul className="mt-12 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-md border bg-border text-sm">
           <li className="col-span-2 sm:col-span-1 flex gap-3 bg-card px-4 py-3">
             <CalendarDays size={18} className="mt-0.5 text-primary shrink-0" />
@@ -78,9 +77,12 @@ const Index = () => (
             <MapPin size={18} className="text-primary shrink-0" />
             <span className="font-semibold">{SITE.area}</span>
           </li>
-          <li className="flex items-center gap-3 bg-card px-4 py-3">
-            <Shield size={18} className="text-primary shrink-0" />
-            <span className="font-semibold">First session free</span>
+          <li className="flex gap-3 bg-card px-4 py-3">
+            <Shield size={18} className="mt-0.5 text-primary shrink-0" />
+            <div>
+              <p className="font-semibold">Launch offer</p>
+              <p className="text-muted-foreground">First two sessions free</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -150,7 +152,15 @@ const Index = () => (
         to="/coach"
         className="group self-start overflow-hidden rounded-lg border bg-card shadow-xl transition-transform hover:-translate-y-1"
       >
-        {/* Picture removed at Lee's request (11-09) - just the Head Coach / Hi I'm Lee link */}
+        {/* Lee's picture lives here (moved from the Head Coach page at Lee's request, 11-15) */}
+        <img
+          src={lee}
+          alt="Lee, head coach at LS Street MMA"
+          width={800}
+          height={1200}
+          loading="lazy"
+          className="aspect-[4/3] w-full object-cover object-top"
+        />
         <div className="flex items-center justify-between gap-4 p-6">
           <div>
             <p className="text-sm uppercase tracking-widest text-primary font-semibold">Head Coach</p>
@@ -206,9 +216,10 @@ const Index = () => (
         </ul>
       </div>
 
-      {/* On phones and tablets the form comes first, so "Book" buttons land right on it */}
+      {/* On phones and tablets the form comes first, so "Launch Offer" buttons land right on it.
+          Heading was "Book Your Free Session", now "Contact Us" (Lee 11-15). */}
       <div className="order-first lg:order-none rounded-xl border-t-4 border-primary bg-card p-6 shadow-xl md:p-8">
-        <h2 className="text-3xl md:text-4xl">Book Your Free Session</h2>
+        <h2 className="text-3xl md:text-4xl">Contact Us</h2>
         <p className="mt-2 mb-6 text-muted-foreground">
           Leave your details and Lee will get back to you with everything you need for your first session.
         </p>

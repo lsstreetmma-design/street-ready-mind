@@ -1,9 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import { SITE } from "@/lib/site";
 
 type LayoutProps = {
   title: string;
@@ -23,7 +21,7 @@ const Layout = ({ title, description, children }: LayoutProps) => {
   // Go to #book etc. (jump straight there from the other page, glide within the same page),
   // otherwise start at the top
   // Each page has its own Layout, so the first run after it appears means "just arrived".
-  // `key` is new on every tap, so "Book Free Session" still scrolls when the address already
+  // `key` is new on every tap, so "Launch Offer" still scrolls when the address already
   // ends in #book (e.g. tap, scroll back up, tap again) - fixed 11-09, it used to do nothing.
   const arrived = useRef(false);
   useEffect(() => {
@@ -46,15 +44,12 @@ const Layout = ({ title, description, children }: LayoutProps) => {
       <main className="flex-1">{children}</main>
       <SiteFooter />
 
-      {/* Phone-only bottom bar so booking is always one tap away
-          (hidden on short sideways screens, where the header shows a Free Session button instead).
-          Because this is always on screen, the orange band's own button is hidden on phones. */}
-      <div className="md:hidden [@media(max-height:500px)]:hidden fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-border bg-white/95 backdrop-blur p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <a href={SITE.phoneHref} className="btn-ghost !py-3 !px-4 text-ink hover:bg-secondary" aria-label={`Call ${SITE.phoneDisplay}`}>
-          <Phone size={20} />
-        </a>
+      {/* Phone-only bottom bar so the launch offer is always one tap away
+          (hidden on short sideways screens, where the header shows a Launch Offer button instead).
+          Phone icon removed at Lee's request (11-15). */}
+      <div className="md:hidden [@media(max-height:500px)]:hidden fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-white/95 backdrop-blur p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <Link to="/#book" className="btn-primary !py-3 flex-1">
-          Book Free Session
+          Launch Offer
         </Link>
       </div>
     </div>

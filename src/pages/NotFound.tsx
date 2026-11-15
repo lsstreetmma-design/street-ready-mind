@@ -6,7 +6,7 @@ const NotFound = () => (
     <section className="mx-auto max-w-xl px-4 py-32 text-center">
       <p className="kicker">404</p>
       <h1 className="mt-6 text-5xl">Page not found</h1>
-      <p className="mt-4 text-lg text-muted-foreground">That page doesn't exist, but your free first session does.</p>
+      <p className="mt-4 text-lg text-muted-foreground">That page doesn't exist, but our launch offer does: your first two sessions are free.</p>
       <Link to="/" className="btn-primary mt-8">
         Back to Home
       </Link>

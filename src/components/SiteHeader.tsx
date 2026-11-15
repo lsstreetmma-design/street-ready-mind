@@ -41,7 +41,7 @@ const SiteHeader = () => {
             <Phone size={16} className="text-primary" /> {SITE.phoneDisplay}
           </a>
           <Link to="/#book" className="btn-primary min-h-11 !py-2.5 !px-5 !text-base whitespace-nowrap">
-            Free Session
+            Launch Offer
           </Link>
         </nav>
 
@@ -52,7 +52,7 @@ const SiteHeader = () => {
             onClick={() => setOpen(false)}
             className="btn-primary hidden [@media(max-height:500px)]:inline-flex min-h-11 !py-2 !px-4 !text-base whitespace-nowrap"
           >
-            Free Session
+            Launch Offer
           </Link>
           <button
             type="button"
@@ -91,7 +91,7 @@ const SiteHeader = () => {
             <Phone size={18} className="text-primary" /> {SITE.phoneDisplay}
           </a>
           <Link to="/#book" onClick={() => setOpen(false)} className="btn-primary w-full mt-2">
-            Book Your Free Session
+            Launch Offer
           </Link>
         </nav>
       )}
