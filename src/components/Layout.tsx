@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -43,15 +43,7 @@ const Layout = ({ title, description, children }: LayoutProps) => {
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />
-
-      {/* Phone-only bottom bar so the launch offer is always one tap away
-          (hidden on short sideways screens, where the header shows a Launch Offer button instead).
-          Phone icon removed at Lee's request (11-15). */}
-      <div className="md:hidden [@media(max-height:500px)]:hidden fixed inset-x-0 bottom-0 z-40 flex border-t border-border bg-white/95 backdrop-blur p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <Link to="/#book" className="btn-primary !py-3 flex-1">
-          Launch Offer
-        </Link>
-      </div>
+      {/* The phone-only bar that followed you down the page (Launch Offer button) was removed (David, 11-15) */}
     </div>
   );
 };
