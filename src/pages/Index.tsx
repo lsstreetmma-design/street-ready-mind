@@ -3,6 +3,7 @@ import { ArrowRight, Brain, CalendarDays, Dumbbell, MapPin, Shield, UserRound, U
 import Layout from "@/components/Layout";
 import BookingForm from "@/components/BookingForm";
 import lee from "@/assets/lee-coach.webp";
+import heroClass from "@/assets/hero-class.webp";
 import { SITE } from "@/lib/site";
 
 // All wording on this page comes from Lee's "LS STREET MMA" Word document (Nov 2026).
@@ -14,9 +15,10 @@ const gains = [
     text: "Learn practical striking, movement, clinching and ground skills that can help you deal with real-life situations.",
   },
   {
+    // Replaced "Improve Your Fitness" (Lee 11-19, his 06:42 wording)
     icon: Dumbbell,
-    title: "Improve Your Fitness",
-    text: "Build strength, stamina and coordination while learning something useful.",
+    title: "Burn Fat Without the Boring Workouts",
+    text: "Enjoy engaging, full-body MMA training designed to burn calories, support weight loss, improve your fitness and build strength.",
   },
   {
     icon: Brain,
@@ -35,16 +37,33 @@ const Index = () => (
     title="LS Street MMA | MMA Self-Defence Classes in Bromley | First Two Sessions Free"
     description="Practical MMA based self-defence training in Bromley. Build confidence, improve your fitness and learn skills that make a real difference. No experience needed. Launch offer: first two sessions free."
   >
-    {/* HERO - light grey, no picture (Lee 11-05: Lee's picture is already further down the page) */}
-    <section className="bg-secondary torn-bottom">
+    {/* HERO - light grey with the class photo behind the heading, fading into the grey (Lee's mockup, 11-19).
+        Phones and tablets: photo across the top, behind the heading, faded out before the intro text.
+        Laptops and up (1024px+): photo on the right.
+        The two gradient layers do the fade: one from the text side, one into the grey underneath. */}
+    <section className="relative isolate overflow-hidden bg-secondary torn-bottom">
+      <div className="absolute right-0 top-0 -z-10 h-[20rem] w-full sm:h-[22rem] lg:h-full lg:w-[62%]" aria-hidden="true">
+        <img
+          src={heroClass}
+          alt=""
+          width={1000}
+          height={1022}
+          className="h-full w-full object-cover object-[65%_35%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary from-10% via-secondary/70 via-45% to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-secondary to-transparent" />
+      </div>
+
       <div className="mx-auto max-w-6xl px-4 pt-14 pb-20 md:pt-20 md:pb-28">
         <p className="kicker">LS Street MMA · {SITE.area}</p>
         <h1 className="mt-6 max-w-3xl text-5xl sm:text-6xl md:text-7xl">
           <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
         </h1>
+        {/* Lee's wording 11-19: "burn fat, support weight loss" replaces "improve your fitness", in orange */}
         <p className="mt-6 max-w-xl text-lg md:text-xl text-foreground/80 leading-relaxed">
-          Practical MMA based self-defence training designed to build your confidence, improve your fitness and teach you
-          skills that can make a real difference.
+          Practical MMA based self-defence training designed to build your confidence,{" "}
+          <span className="font-semibold text-primary">burn fat, support weight loss</span> and teach you skills that can
+          make a real difference.
         </p>
         <p className="mt-3 font-semibold">No experience needed. All fitness levels welcome.</p>
 
