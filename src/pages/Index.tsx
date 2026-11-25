@@ -58,8 +58,8 @@ const Index = () => (
         <h1 className="mt-6 max-w-3xl text-5xl text-white sm:text-6xl md:text-7xl [text-shadow:0_2px_14px_rgb(0_0_0/0.45)]">
           <span className="brush-underline">Real-World</span> <span className="whitespace-nowrap">Self-Defence</span> Training
         </h1>
-        {/* Lee 11-22: "burn fat" removed and "support weight loss" no longer orange */}
-        <p className="mt-6 max-w-xl text-lg md:text-xl text-white/90 leading-relaxed [text-shadow:0_1px_8px_rgb(0_0_0/0.5)]">
+        {/* Lee 11-22: "burn fat" removed and "support weight loss" no longer orange; full white like the heading (11-25) */}
+        <p className="mt-6 max-w-xl text-lg md:text-xl text-white leading-relaxed [text-shadow:0_1px_8px_rgb(0_0_0/0.5)]">
           Practical MMA based self-defence training designed to build your confidence, support weight loss and teach you
           skills that can make a real difference.
         </p>
